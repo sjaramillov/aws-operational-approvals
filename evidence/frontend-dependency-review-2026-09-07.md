@@ -37,3 +37,25 @@ Entorno: macOS arm64, Node 26.0.0, npm 11.12.1, Python 3.13.12 y Terraform 1.15.
 Reproducción: `npm ci --prefix sales_demo/web`, `make check-local PYTHON=.venv/bin/python` y `npm audit --prefix sales_demo/web`. Los checks del PR registran la verificación adicional en Linux con Node 22. La consulta de vulnerabilidades es una observación puntual, no una garantía de ausencia de fallos.
 
 Esta revisión cubre las superficies locales existentes. No aplica infraestructura, consulta una cuenta AWS ni ejecuta los E2E desplegados. La demo de navegador y la API Python se verifican por separado; estos resultados no acreditan su integración en producción.
+
+## Revisión adicional de TypeScript, pruebas y navegación
+
+Tras integrar [#14](https://github.com/sjaramillov/aws-operational-approvals/pull/14), Dependabot generó [#15](https://github.com/sjaramillov/aws-operational-approvals/pull/15), [#16](https://github.com/sjaramillov/aws-operational-approvals/pull/16) y [#17](https://github.com/sjaramillov/aws-operational-approvals/pull/17). La consulta `npm outdated` permitió revisar también las otras dos actualizaciones directas disponibles.
+
+| Dependencia | Anterior | Revisada |
+|---|---|---|
+| TypeScript | 5.8.3 | 7.0.2 |
+| `@testing-library/jest-dom` | 6.9.1 | 7.0.1 |
+| `@types/react-dom` | 19.2.5 | 19.2.7 |
+| `@playwright/test` | 1.62.1 | 1.63.0 |
+| React Router DOM | 7.18.2 | 7.18.3 |
+
+[TypeScript 7](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/) utiliza un compilador nativo y adopta cambios de configuración de [TypeScript 6](https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/). Este proyecto invoca `tsc -b` y no utiliza la API programática del compilador; el typecheck desde una instalación limpia pasa con las configuraciones existentes, manteniendo `strict` y las comprobaciones de código sin usar.
+
+[jest-dom 7](https://github.com/testing-library/jest-dom/releases/tag/v7.0.0) requiere Node 22 y `@testing-library/dom` como peer. El rango Node existente y la versión DOM 10 del lock satisfacen esos requisitos. La [versión 7.0.1](https://github.com/testing-library/jest-dom/releases/tag/v7.0.1) declara Vitest como peer opcional. Se conservan todos los matchers y aserciones actuales.
+
+[Playwright 1.63](https://github.com/microsoft/playwright/releases/tag/v1.63.0) se verifica con Chromium 153.0.8010.12, instalado con `--no-remove` para conservar otros navegadores locales. [React Router 7.18.3](https://github.com/remix-run/react-router/blob/react-router%407.18.3/CHANGELOG.md#v7183) incluye ajustes en matching y validación de URLs; los recorridos de la aplicación pasan con este parche.
+
+Se repitió `make check-local` después de `npm ci`: 153 tests Python y 27 subtests, 38 tests Vitest, 6 tests de configuración, 8 E2E sin retries y 15 comprobaciones HTTP aprobados. Typecheck, builds normal/demo, paquetes Lambda y controles estáticos Terraform también pasan. El código de la aplicación, la configuración del compilador y las pruebas no requieren cambios. `npm ls --depth=0` pasa, `npm outdated --json` devuelve `{}` y `npm audit` reporta cero vulnerabilidades conocidas en esta segunda consulta. Estos resultados corresponden al mismo entorno local y mantienen los límites de alcance indicados arriba.
+
+Los dos hashes de destino se actualizan de nuevo, preservando los 123 hashes de origen. El inventario de terceros refleja 162 entradas npm, incluidos veinte paquetes opcionales de TypeScript para plataformas específicas bajo Apache-2.0. La licencia del proyecto y los controles de publicación permanecen vigentes.
