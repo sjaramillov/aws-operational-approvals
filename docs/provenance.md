@@ -4,6 +4,8 @@ Este repositorio deriva selectivamente de un candidato comercial construido en e
 
 El proyecto reúne código y documentación técnica propios, seleccionados por su relación con el producto. Las dependencias y contenidos de terceros conservan sus derechos; no se incorporaron materiales privados ajenos al alcance de la solución.
 
+El material original se ofrece bajo [Apache License 2.0](../LICENSE), con el [alcance de licencia](licensing.md) y los [avisos de terceros](../THIRD_PARTY_NOTICES.md). Esta concesión sustituye el aviso general anterior de derechos reservados para ese material; no acredita titularidad sobre contenido ajeno ni sustituye sus permisos.
+
 ## Transformaciones
 
 - Nombre visible independiente: Aprobaciones operativas; distintivo geométrico nuevo, sin copiar el logo fuente.
@@ -21,7 +23,7 @@ El proyecto reúne código y documentación técnica propios, seleccionados por 
 
 ## Dependencias
 
-React, Vite, Python, AWS SDK y demás dependencias conservan sus licencias propias. Sus binarios y directorios `node_modules`, `.venv` y `.terraform` no forman parte de la distribución del código. La revisión de publicación debe incluir el manifiesto de dependencias y avisos requeridos; no se reclaman como creación propia.
+React, Vite, Python, AWS SDK y demás dependencias conservan sus licencias propias. Sus binarios y directorios `node_modules`, `.venv` y `.terraform` no forman parte de la distribución del código. Las licencias y referencias revisadas se registran en [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md); no se reclaman como creación propia. Los ZIPs Lambda incorporan los avisos del proyecto y los módulos fuente seleccionados, sin empaquetar el SDK AWS ni otras dependencias externas.
 
 ## Exclusiones
 

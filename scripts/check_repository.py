@@ -5,6 +5,7 @@ import json
 import re
 import subprocess
 from urllib.parse import unquote
+from publication_policy import private_path_reason
 
 ROOT = Path(__file__).resolve().parents[1]
 paths = subprocess.check_output(['git', 'ls-files', '-z'], cwd=ROOT).decode().split('\0')
@@ -21,12 +22,9 @@ for rel in filter(None, paths):
     size_limit = 3_000_000 if rel.startswith('docs/visuals/') and path.suffix == '.png' else 2_000_000
     if path.stat().st_size > size_limit:
         errors.append(f'File exceeds {size_limit} byte publication limit: {rel}')
-    if any(x in path.relative_to(ROOT).parts for x in ('.venv', 'node_modules', '.sf', '.sfdx', '.terraform')):
-        errors.append(f'Private or generated directory tracked: {rel}')
-    if path.name.startswith('.env') and not path.name.endswith('.example'):
-        errors.append(f'Environment file tracked: {rel}')
-    if path.suffix in ('.pem', '.key', '.tfstate', '.tfplan'):
-        errors.append(f'Private runtime file tracked: {rel}')
+    reason = private_path_reason(rel)
+    if reason:
+        errors.append(f'{reason}: {rel}')
     if path.suffix == '.md':
         for target in re.findall(r'\[[^\]\n]+\]\(([^)]+)\)', path.read_text()):
             target = target.split(' "', 1)[0].strip('<>')

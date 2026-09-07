@@ -2,7 +2,8 @@
 """Construye ZIPs Lambda reproducibles sin credenciales ni acceso de red.
 
 Ambas funciones comparten el mismo paquete porque sus entrypoints importan un
-dominio y adaptadores comunes. Los ZIP resultantes se escriben en ``build/``,
+dominio y adaptadores comunes. Incluyen los avisos legales del proyecto, pero no
+empaquetan el SDK AWS ni dependencias de terceros. Los ZIP se escriben en ``build/``,
 que permanece fuera de Git, y el JSON emitido contiene únicamente rutas y
 hashes de artefactos locales.
 """
@@ -21,6 +22,7 @@ from pathlib import Path
 
 FIXED_ZIP_TIMESTAMP = (2026, 8, 26, 0, 0, 0)
 PACKAGE_NAMES = ("api", "worker")
+PACKAGE_NOTICES = ("LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md")
 RUNTIME_MODULES = (
     "__init__.py",
     "aws_adapters.py",
@@ -40,6 +42,7 @@ class PackageError(RuntimeError):
 def _sources(sales_root: Path) -> list[tuple[Path, str]]:
     package_root = sales_root.parent
     candidates = [
+        *(package_root / name for name in PACKAGE_NOTICES),
         sales_root / "__init__.py",
         *(sales_root / "backend" / name for name in RUNTIME_MODULES),
     ]

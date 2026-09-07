@@ -15,6 +15,8 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
+      - name: Review private paths throughout checkout history
+        run: python3 scripts/check_publication_history.py
       - name: Download and verify Gitleaks
         shell: bash
         run: |
