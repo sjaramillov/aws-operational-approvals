@@ -1,6 +1,6 @@
 # Estado de evidencia
 
-Revisión posterior: [actualizaciones de dependencias del 7 de septiembre de 2026](dependency-review-2026-09-07.md). Los resultados que siguen corresponden a la extracción inicial.
+Revisiones posteriores: [actualizaciones de dependencias](dependency-review-2026-09-07.md) y [migración del frontend](frontend-dependency-review-2026-09-07.md), ambas del 7 de septiembre de 2026. Los resultados que siguen corresponden a la extracción inicial.
 
 Fecha de extracción: 7 de septiembre de 2026. Esta evidencia corresponde exclusivamente a la copia independiente del producto de aprobaciones.
 

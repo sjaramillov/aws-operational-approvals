@@ -572,24 +572,26 @@
       "source_path": "sales_demo/web/package-lock.json",
       "destination_path": "sales_demo/web/package-lock.json",
       "source_sha256": "5ac4aafad6f55d2ccacd0793d98c9f0e6f223c847a20e601c6296f62afb5653f",
-      "destination_sha256": "077820070cdf6226023e76b642421976d95b998fb362794ea7fdb8b5cb6932b1",
+      "destination_sha256": "e9d1c08c328d8ef3489079d7e491c1e55d620446fa8a58e2810843e4ad1da5af",
       "changes": [
         "sanitized_and_neutralized_extraction",
         "exact_versions_from_existing_lockfile",
         "resolve_reviewed_testing_library_and_jsdom_dependency_updates",
-        "declare_apache_2_license_in_root_metadata_without_resolving_dependencies"
+        "declare_apache_2_license_in_root_metadata_without_resolving_dependencies",
+        "coordinated_vite8_react_plugin6_vitest5_user_event_patch_update"
       ]
     },
     {
       "source_path": "sales_demo/web/package.json",
       "destination_path": "sales_demo/web/package.json",
       "source_sha256": "63e6f0acc41fdd232695bce41d906c75766d83865d075e3097b8ecbdfd846530",
-      "destination_sha256": "ce73cd488cd896b8043ea8c298ee72b66741d26754e29461c2ecb27c04a843e5",
+      "destination_sha256": "fdcfd1aa1c30f727486f5b3d34d4fb862998ae7b9fb80ea1e87d88fd165ccd6d",
       "changes": [
         "sanitized_and_neutralized_extraction",
         "exact_versions_from_existing_lockfile",
         "update_testing_library_and_jsdom_with_supported_node_engines",
-        "declare_apache_2_license_for_original_project_metadata"
+        "declare_apache_2_license_for_original_project_metadata",
+        "coordinated_vite8_react_plugin6_vitest5_user_event_patch_update"
       ]
     },
     {
