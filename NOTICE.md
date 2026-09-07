@@ -1,6 +1,6 @@
 # Autoría, licencia e independencia
 
-Proyecto de Sebastián Jaramillo. El código, la documentación y los diagramas
+Proyecto de Sebastian Jaramillo Valderrama. El código, la documentación y los diagramas
 originales se ofrecen bajo [Apache License 2.0](LICENSE), conforme al
 [alcance de licencia](docs/licensing.md). El aviso de atribución está en [NOTICE](NOTICE).
 La reutilización comercial permitida por esa licencia no requiere contratar al autor.

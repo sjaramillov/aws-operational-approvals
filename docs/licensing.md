@@ -1,5 +1,7 @@
 # Licencia y alcance
 
+Titular del material original: **Sebastian Jaramillo Valderrama**. Año del aviso de copyright: **2026**.
+
 Desde la revisión del 7 de septiembre de 2026, el material original publicado en
 este repositorio se ofrece bajo [Apache License 2.0](../LICENSE). Esta decisión
 sustituye el aviso general anterior de derechos reservados para ese material.
