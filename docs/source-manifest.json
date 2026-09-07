@@ -150,8 +150,10 @@
       "source_path": "sales_demo/scripts/build_lambda_packages.py",
       "destination_path": "sales_demo/scripts/build_lambda_packages.py",
       "source_sha256": "e7cc4021d662b77b376506985fd1bd0f74763121c78104202ad051981ddead4c",
-      "destination_sha256": "e7cc4021d662b77b376506985fd1bd0f74763121c78104202ad051981ddead4c",
-      "changes": []
+      "destination_sha256": "ab38b2c3b729283e03630321b04eaeb613c98085c86c2f984fd64a0ee23cedad",
+      "changes": [
+        "include_canonical_project_license_and_notices_in_reproducible_lambda_packages"
+      ]
     },
     {
       "source_path": "sales_demo/scripts/validate_candidate.py",
@@ -493,8 +495,10 @@
       "source_path": "sales_demo/tests/test_lambda_packages.py",
       "destination_path": "sales_demo/tests/test_lambda_packages.py",
       "source_sha256": "05b323a339eb9c19581e3191379b7c36a21f9b0e28988744ac0491d912799a48",
-      "destination_sha256": "05b323a339eb9c19581e3191379b7c36a21f9b0e28988744ac0491d912799a48",
-      "changes": []
+      "destination_sha256": "116de3bc124426fd67998369a9546a36597f0f81700ef106c1177d2ccfed4692",
+      "changes": [
+        "verify_required_legal_files_and_reject_missing_or_modified_package_notices"
+      ]
     },
     {
       "source_path": "sales_demo/web/.env.example",
@@ -568,22 +572,24 @@
       "source_path": "sales_demo/web/package-lock.json",
       "destination_path": "sales_demo/web/package-lock.json",
       "source_sha256": "5ac4aafad6f55d2ccacd0793d98c9f0e6f223c847a20e601c6296f62afb5653f",
-      "destination_sha256": "aced50b8ea4b62667d4ddaf742ab06587d4c770ef9aceab50ba26f5896e1820b",
+      "destination_sha256": "077820070cdf6226023e76b642421976d95b998fb362794ea7fdb8b5cb6932b1",
       "changes": [
         "sanitized_and_neutralized_extraction",
         "exact_versions_from_existing_lockfile",
-        "resolve_reviewed_testing_library_and_jsdom_dependency_updates"
+        "resolve_reviewed_testing_library_and_jsdom_dependency_updates",
+        "declare_apache_2_license_in_root_metadata_without_resolving_dependencies"
       ]
     },
     {
       "source_path": "sales_demo/web/package.json",
       "destination_path": "sales_demo/web/package.json",
       "source_sha256": "63e6f0acc41fdd232695bce41d906c75766d83865d075e3097b8ecbdfd846530",
-      "destination_sha256": "6b6a5fc8aecdad5b117d32f176ba2e3009b78a3bc50ac7a6eb8b637f4928d9f2",
+      "destination_sha256": "ce73cd488cd896b8043ea8c298ee72b66741d26754e29461c2ecb27c04a843e5",
       "changes": [
         "sanitized_and_neutralized_extraction",
         "exact_versions_from_existing_lockfile",
-        "update_testing_library_and_jsdom_with_supported_node_engines"
+        "update_testing_library_and_jsdom_with_supported_node_engines",
+        "declare_apache_2_license_for_original_project_metadata"
       ]
     },
     {

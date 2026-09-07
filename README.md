@@ -78,3 +78,10 @@ para adaptar la demostración a un proceso concreto. [Autoría y condiciones de 
 ## Arquitectura visual
 
 La [galería del proyecto](docs/visuals/README.md) reúne la portada, la arquitectura de solución y la revisión de AWS Well-Architected. Los diagramas identifican los componentes existentes y el diseño propuesto, con fuentes oficiales y evidencia del proyecto. Incluyen PNG para compartir y SVG editables.
+
+## Licencia
+
+El material original se publica bajo [Apache License 2.0](LICENSE), con las
+atribuciones de [NOTICE](NOTICE). Consulta el [alcance](docs/licensing.md), los
+[avisos de terceros](THIRD_PARTY_NOTICES.md) y la [independencia del proyecto](NOTICE.md).
+La licencia permite reutilización comercial y no incluye servicios de nube ni soporte.

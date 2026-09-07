@@ -1,0 +1,15 @@
+#!/bin/sh
+# Check committed content before sending it to the public remote.
+set -eu
+cd "$(git rev-parse --show-toplevel)"
+python3 scripts/check_repository.py
+python3 scripts/check_publication_history.py
+if command -v gitleaks >/dev/null 2>&1; then
+    scanner=$(command -v gitleaks)
+elif [ -x "$HOME/.local/bin/gitleaks" ]; then
+    scanner="$HOME/.local/bin/gitleaks"
+else
+    echo 'Push blocked: install Gitleaks before publishing this repository.' >&2
+    exit 1
+fi
+"$scanner" git . --redact --no-banner --log-opts='--all'
