@@ -18,21 +18,21 @@ Versiones y expresiones de licencia tomadas de `sales_demo/web/package.json` y `
 | --- | --- | --- | --- |
 | React | 19.2.8 | MIT | Interfaz |
 | React DOM | 19.2.8 | MIT | Interfaz |
-| React Router DOM | 7.18.2 | MIT | Navegación |
+| React Router DOM | 7.18.3 | MIT | Navegación |
 | `@axe-core/playwright` | 4.13.0 | MPL-2.0 | Pruebas de accesibilidad |
-| `@playwright/test` | 1.62.1 | Apache-2.0 | Pruebas de navegador |
-| `@testing-library/jest-dom` | 6.9.1 | MIT | Pruebas |
+| `@playwright/test` | 1.63.0 | Apache-2.0 | Pruebas de navegador |
+| `@testing-library/jest-dom` | 7.0.1 | MIT | Pruebas |
 | `@testing-library/react` | 16.3.3 | MIT | Pruebas |
 | `@testing-library/user-event` | 14.6.7 | MIT | Pruebas |
 | `@types/react` | 19.2.18 | MIT | Tipos |
-| `@types/react-dom` | 19.2.5 | MIT | Tipos |
+| `@types/react-dom` | 19.2.7 | MIT | Tipos |
 | `@vitejs/plugin-react` | 6.1.1 | MIT | Compilación |
 | jsdom | 30.0.1 | MIT | Pruebas |
-| TypeScript | 5.8.3 | Apache-2.0 | Compilación |
+| TypeScript | 7.0.2 | Apache-2.0 | Compilación |
 | Vite | 8.2.2 | MIT | Desarrollo y compilación |
 | Vitest | 5.0.0 | MIT | Pruebas |
 
-Las 143 entradas de dependencias del lockfile, incluyendo transitivas y opcionales, declaran: MIT (108), MPL-2.0 (14), Apache-2.0 (8), ISC (3), BlueOak-1.0.0 (3), MIT-0 (2), BSD-2-Clause (2), BSD-3-Clause (2) y CC0-1.0 (1). Son metadatos de los paquetes, no una atribución de Apache-2.0 a todo el árbol de dependencias.
+Las 162 entradas de dependencias del lockfile, incluyendo transitivas y opcionales, declaran: MIT (107), Apache-2.0 (28), MPL-2.0 (14), ISC (3), BlueOak-1.0.0 (3), MIT-0 (2), BSD-2-Clause (2), BSD-3-Clause (2) y CC0-1.0 (1). Son metadatos de los paquetes, no una atribución de Apache-2.0 a todo el árbol de dependencias. TypeScript 7 incorpora veinte paquetes opcionales con binarios para plataformas específicas, también declarados bajo Apache-2.0; los gestores los descargan por separado.
 
 Los componentes con MPL-2.0 requieren distinguirse expresamente:
 
