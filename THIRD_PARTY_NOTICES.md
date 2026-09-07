@@ -12,7 +12,7 @@ Al distribuir un frontend compilado, contenedor, SDK o paquete que sí incorpore
 
 ## Frontend y herramientas npm
 
-Versiones y expresiones de licencia tomadas de `sales_demo/web/package.json` y `sales_demo/web/package-lock.json`, sin cambiar resoluciones ni integridades. Cada paquete conserva los términos y avisos de sus autores; las fichas del [registro npm](https://registry.npmjs.org/) y los archivos de licencia incluidos en cada distribución son las fuentes de referencia.
+Versiones y expresiones de licencia tomadas de `sales_demo/web/package.json` y `sales_demo/web/package-lock.json`, actualizados durante la [revisión de herramientas frontend](evidence/frontend-dependency-review-2026-09-07.md). Cada paquete conserva los términos y avisos de sus autores; las fichas del [registro npm](https://registry.npmjs.org/) y los archivos de licencia incluidos en cada distribución son las fuentes de referencia.
 
 | Dependencia directa | Versión | Licencia declarada | Uso |
 | --- | --- | --- | --- |
@@ -23,21 +23,23 @@ Versiones y expresiones de licencia tomadas de `sales_demo/web/package.json` y `
 | `@playwright/test` | 1.62.1 | Apache-2.0 | Pruebas de navegador |
 | `@testing-library/jest-dom` | 6.9.1 | MIT | Pruebas |
 | `@testing-library/react` | 16.3.3 | MIT | Pruebas |
-| `@testing-library/user-event` | 14.6.6 | MIT | Pruebas |
+| `@testing-library/user-event` | 14.6.7 | MIT | Pruebas |
 | `@types/react` | 19.2.18 | MIT | Tipos |
 | `@types/react-dom` | 19.2.5 | MIT | Tipos |
-| `@vitejs/plugin-react` | 5.2.0 | MIT | Compilación |
+| `@vitejs/plugin-react` | 6.1.1 | MIT | Compilación |
 | jsdom | 30.0.1 | MIT | Pruebas |
 | TypeScript | 5.8.3 | Apache-2.0 | Compilación |
-| Vite | 7.3.6 | MIT | Desarrollo y compilación |
-| Vitest | 3.2.7 | MIT | Pruebas |
+| Vite | 8.2.2 | MIT | Desarrollo y compilación |
+| Vitest | 5.0.0 | MIT | Pruebas |
 
-Las 223 entradas de dependencias del lockfile, incluyendo transitivas y opcionales, declaran: MIT (195), Apache-2.0 (8), ISC (7), BlueOak-1.0.0 (3), MPL-2.0 (2), MIT-0 (2), BSD-2-Clause (2), BSD-3-Clause (2), CC-BY-4.0 (1) y CC0-1.0 (1). Son metadatos de los paquetes, no una atribución de Apache-2.0 a todo el árbol de dependencias.
+Las 143 entradas de dependencias del lockfile, incluyendo transitivas y opcionales, declaran: MIT (108), MPL-2.0 (14), Apache-2.0 (8), ISC (3), BlueOak-1.0.0 (3), MIT-0 (2), BSD-2-Clause (2), BSD-3-Clause (2) y CC0-1.0 (1). Son metadatos de los paquetes, no una atribución de Apache-2.0 a todo el árbol de dependencias.
 
-Dos grupos requieren distinguirse expresamente:
+Los componentes con MPL-2.0 requieren distinguirse expresamente:
 
 - **MPL-2.0:** `@axe-core/playwright` y `axe-core`, ambos 4.13.0, herramientas de Deque Systems para pruebas. No se redistribuye su código en este repositorio ni en los ZIP Lambda. Si se distribuye material cubierto por MPL, deben conservarse sus términos, avisos y obligaciones correspondientes al código cubierto. Fuentes: [paquete publicado](https://registry.npmjs.org/@axe-core%2fplaywright/4.13.0), [licencia upstream](https://github.com/dequelabs/axe-core/blob/develop/LICENSE).
-- **CC-BY-4.0:** `caniuse-lite` 1.0.30001810, datos de compatibilidad de Can I Use utilizados por las herramientas de desarrollo. Sus datos mantienen la atribución y licencia de sus autores; no se relicencian como Apache-2.0. Fuentes: [metadatos de la versión](https://registry.npmjs.org/caniuse-lite/1.0.30001810), [licencia upstream](https://github.com/browserslist/caniuse-lite/blob/main/LICENSE), [Can I Use](https://caniuse.com/).
+- **MPL-2.0:** `lightningcss` 1.33.0 y sus once paquetes opcionales para plataformas específicas, utilizados por Vite para procesar CSS. No se redistribuye la herramienta en este árbol Git ni en los ZIP Lambda; si se incluye en un contenedor u otra distribución, deben conservarse su licencia y avisos. Fuentes: [metadatos de la versión](https://registry.npmjs.org/lightningcss/1.33.0), [licencia upstream](https://github.com/parcel-bundler/lightningcss/blob/master/LICENSE).
+
+`caniuse-lite`, anteriormente presente bajo CC-BY-4.0, ya no forma parte del lockfile actual. Las copias históricas y cualquier artefacto anterior que lo incluya conservan las obligaciones de aquella versión.
 
 ## Python y SDK de AWS
 

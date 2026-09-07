@@ -20,6 +20,13 @@ updates:
     schedule:
       interval: monthly
     open-pull-requests-limit: 3
+    groups:
+      vite-toolchain:
+        patterns:
+          - "vite"
+          - "@vitejs/plugin-react"
+          - "vitest"
+          - "@vitest/*"
   - package-ecosystem: "terraform"
     directory: "/sales_demo/terraform"
     schedule:

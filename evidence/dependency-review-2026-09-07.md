@@ -18,9 +18,11 @@ boto3 1.43.88 requiere botocore >=1.43.88 y <1.44.0. Actualizar uno solo dejaba 
 
 [jsdom 30.0.1](https://registry.npmjs.org/jsdom/30.0.1) requiere Node `^22.22.2 || ^24.15.0 || >=26.0.0`; el paquete y el README declaran ese rango. La suite actual utiliza la configuración de jsdom verificada aquí. No se afirma compatibilidad con opciones de jsdom que el proyecto no utiliza.
 
-## Actualización pendiente
+## Actualización inicialmente pendiente
 
 [@vitejs/plugin-react 6.1.1](https://registry.npmjs.org/@vitejs%2fplugin-react/6.1.1), propuesta en [#7](https://github.com/sjaramillov/aws-operational-approvals/pull/7), exige Vite 8. El proyecto conserva Vite 7.3.6 y Vitest 3.2.7. La migración requiere revisar conjuntamente el plugin, Vite, Vitest y sus cambios de transformación. No se incorpora esa actualización aislada.
+
+La [revisión posterior del frontend](frontend-dependency-review-2026-09-07.md) documenta la migración conjunta y sus verificaciones. El párrafo anterior registra la decisión de esta primera revisión.
 
 ## Corrección del control de contenido
 
