@@ -1,5 +1,7 @@
 # Estado de evidencia
 
+Revisión posterior: [actualizaciones de dependencias del 7 de septiembre de 2026](dependency-review-2026-09-07.md). Los resultados que siguen corresponden a la extracción inicial.
+
 Fecha de extracción: 7 de septiembre de 2026. Esta evidencia corresponde exclusivamente a la copia independiente del producto de aprobaciones.
 
 La copia se comprobó localmente con resultados satisfactorios en los controles ejecutados. No se aplicó Terraform, no se accedió a una cuenta AWS y no se ejecutaron E2E remotos. El reporte legible por máquina está en [validation-local.json](validation-local.json) y queda ligado al hash del manifiesto de extracción.

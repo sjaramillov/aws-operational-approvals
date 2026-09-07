@@ -10,6 +10,11 @@ updates:
     schedule:
       interval: monthly
     open-pull-requests-limit: 3
+    groups:
+      aws-sdk:
+        patterns:
+          - "boto3"
+          - "botocore"
   - package-ecosystem: "npm"
     directory: "/sales_demo/web"
     schedule:

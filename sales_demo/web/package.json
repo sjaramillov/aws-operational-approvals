@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  },
   "scripts": {
     "dev": "vite --mode demo --host 127.0.0.1",
     "build": "tsc -b && vite build",
@@ -27,12 +30,12 @@
     "@axe-core/playwright": "4.13.0",
     "@playwright/test": "1.62.1",
     "@testing-library/jest-dom": "6.9.1",
-    "@testing-library/react": "16.3.2",
+    "@testing-library/react": "16.3.3",
     "@testing-library/user-event": "14.6.6",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.5",
     "@vitejs/plugin-react": "5.2.0",
-    "jsdom": "26.1.0",
+    "jsdom": "30.0.1",
     "typescript": "5.8.3",
     "vite": "7.3.6",
     "vitest": "3.2.7"

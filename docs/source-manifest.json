@@ -157,17 +157,20 @@
       "source_path": "sales_demo/scripts/validate_candidate.py",
       "destination_path": "sales_demo/scripts/validate_candidate.py",
       "source_sha256": "4a295fa5377745d20ece7c79934a618e76575a9be6887e5772bf839eabfa9db5",
-      "destination_sha256": "478d4bebb3cece357101f259cd38f4b31c79140a260a83401fe7f13a5fed3230",
+      "destination_sha256": "f910923e0e9fb9a37b49dc34cd0267ab7ad5f2ff22bf7ae5332cf9a0aba82f00",
       "changes": [
-        "sanitized_and_neutralized_extraction"
+        "sanitized_and_neutralized_extraction",
+        "limit_account_id_checksum_exception_to_valid_terraform_lock_lines"
       ]
     },
     {
       "source_path": "sales_demo/terraform/.terraform.lock.hcl",
       "destination_path": "sales_demo/terraform/.terraform.lock.hcl",
       "source_sha256": "a04d5753249b9d5cd3498e2f69d171f189fe9972b3536ccb9998f6dce7bcb789",
-      "destination_sha256": "a04d5753249b9d5cd3498e2f69d171f189fe9972b3536ccb9998f6dce7bcb789",
-      "changes": []
+      "destination_sha256": "2971d1e8dad99a837a7f32d86fd5a3f44912c0bc4769fec9de381e346a0d0b02",
+      "changes": [
+        "update_aws_provider_to_6_63_0_with_verified_upstream_checksums"
+      ]
     },
     {
       "source_path": "sales_demo/terraform/activate_pilot.py",
@@ -481,8 +484,10 @@
       "source_path": "sales_demo/tests/test_candidate_contract.py",
       "destination_path": "sales_demo/tests/test_candidate_contract.py",
       "source_sha256": "a9d56c916014941805b77d09f37dbd14c1e9c934d07d887c0d8d381de5747beb",
-      "destination_sha256": "a9d56c916014941805b77d09f37dbd14c1e9c934d07d887c0d8d381de5747beb",
-      "changes": []
+      "destination_sha256": "e123dc5cba4cc6f9706ca5bfa120f4d530b31db6d9fcd2b209f451eabbc2d480",
+      "changes": [
+        "regressions_for_terraform_checksum_false_positive_and_sensitive_content_boundaries"
+      ]
     },
     {
       "source_path": "sales_demo/tests/test_lambda_packages.py",
@@ -563,20 +568,22 @@
       "source_path": "sales_demo/web/package-lock.json",
       "destination_path": "sales_demo/web/package-lock.json",
       "source_sha256": "5ac4aafad6f55d2ccacd0793d98c9f0e6f223c847a20e601c6296f62afb5653f",
-      "destination_sha256": "919e84fc328e3a550f4045bcab239bda365c313ca54d9609ac2961bb8bc684e4",
+      "destination_sha256": "aced50b8ea4b62667d4ddaf742ab06587d4c770ef9aceab50ba26f5896e1820b",
       "changes": [
         "sanitized_and_neutralized_extraction",
-        "exact_versions_from_existing_lockfile"
+        "exact_versions_from_existing_lockfile",
+        "resolve_reviewed_testing_library_and_jsdom_dependency_updates"
       ]
     },
     {
       "source_path": "sales_demo/web/package.json",
       "destination_path": "sales_demo/web/package.json",
       "source_sha256": "63e6f0acc41fdd232695bce41d906c75766d83865d075e3097b8ecbdfd846530",
-      "destination_sha256": "7c19a807e18074c5ccf21ebd724d1563812b57dea6bc56be5ff56821321b9cd9",
+      "destination_sha256": "6b6a5fc8aecdad5b117d32f176ba2e3009b78a3bc50ac7a6eb8b637f4928d9f2",
       "changes": [
         "sanitized_and_neutralized_extraction",
-        "exact_versions_from_existing_lockfile"
+        "exact_versions_from_existing_lockfile",
+        "update_testing_library_and_jsdom_with_supported_node_engines"
       ]
     },
     {

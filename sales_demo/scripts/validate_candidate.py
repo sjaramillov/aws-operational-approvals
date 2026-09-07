@@ -66,6 +66,15 @@ TEXT_SUFFIXES = frozenset(
 # El ARN mock de Terraform admite el sentinel no enrutable de doce ceros. Todo
 # otro bloque de doce dígitos se trata como identificador de cuenta persistido.
 ACCOUNT_ID = re.compile(r"(?<!\d)(?!0{12}(?!\d))\d{12}(?!\d)")
+# Solo entradas completas del lock: SHA-256 hexadecimal o base64 canónico
+# (32 bytes, un padding). Los comentarios de bloque se conservan completos;
+# los grupos de checksum conservan comillas, coma y espacios.
+TERRAFORM_LOCK_CHECKSUM = re.compile(
+    r'(?s:/\*.*?(?:\*/|\Z))|'
+    r'^([ \t]*")(?:h1:[A-Za-z0-9+/]{42}[AEIMQUYcgkosw048]=|zh:[0-9a-fA-F]{64})'
+    r'("[ \t]*,?[ \t]*\r?)$',
+    re.MULTILINE,
+)
 ACCESS_KEY = re.compile(r"\b(?:AKIA|ASIA)[A-Z0-9]{16}\b")
 PRIVATE_KEY = re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----")
 EMAIL_ADDRESS = re.compile(r"(?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b")
@@ -131,6 +140,14 @@ def _assert_no_sensitive_material(root: Path, files: list[Path]) -> None:
     for path in files:
         text = _read(path)
         relative = path.relative_to(root).as_posix()
+        account_text = (
+            TERRAFORM_LOCK_CHECKSUM.sub(
+                lambda match: match.group(1) + match.group(2) if match.group(1) is not None else match.group(0),
+                text,
+            )
+            if relative == "terraform/.terraform.lock.hcl"
+            else text
+        )
         for label, pattern in (
             ("AWS account id", ACCOUNT_ID),
             ("AWS access key", ACCESS_KEY),
@@ -138,7 +155,7 @@ def _assert_no_sensitive_material(root: Path, files: list[Path]) -> None:
             ("email address / possible PII", EMAIL_ADDRESS),
             ("literal password", PASSWORD_ASSIGNMENT),
         ):
-            if pattern.search(text):
+            if pattern.search(account_text if pattern is ACCOUNT_ID else text):
                 findings.append(f"{relative}: {label}")
     if findings:
         raise CandidateError("sensitive or private material detected: " + "; ".join(findings))
