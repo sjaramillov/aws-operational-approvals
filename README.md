@@ -14,7 +14,7 @@ El ejemplo incluido usa solicitudes de flota: hasta 50 vehículos se aprueban au
 
 ## Probar el recorrido
 
-Requisitos: Python 3.11 o superior; Node.js 22.12 o superior y npm. El entorno verificado se registra junto a los resultados. Desde la raíz:
+Requisitos: Python 3.11 o superior y npm. Para Node.js, usar 22.22.2 o superior dentro de la rama 22; también se admiten 24.15.0 o superior dentro de la rama 24, o 26 y posteriores. Estas versiones cumplen el requisito de jsdom para las pruebas. El entorno verificado se registra junto a los resultados. Desde la raíz:
 
 ```bash
 python3 -m venv .venv
