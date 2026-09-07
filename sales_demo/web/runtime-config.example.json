@@ -1,0 +1,19 @@
+{
+  "apiBaseUrl": "https://a1b2c3d4.execute-api.us-east-1.amazonaws.com",
+  "awsRegion": "us-east-1",
+  "cognitoUserPool": "us-east-1_AbCdEf123",
+  "cognitoClientId": "public-client-example",
+  "cognitoDomain": "https://approvals-sales-pilot.auth.us-east-1.amazoncognito.com",
+  "redirectUri": "https://d111111abcdef8.cloudfront.net/auth/callback",
+  "logoutUri": "https://d111111abcdef8.cloudfront.net/",
+  "oauthFlow": "authorization_code_pkce",
+  "scopes": [
+    "openid"
+  ],
+  "expiresAt": null,
+  "syntheticDataOnly": true,
+  "deploymentBinding": {
+    "sourceRevision": "1111111111111111111111111111111111111111",
+    "frontendReleaseSha256": "2222222222222222222222222222222222222222222222222222222222222222"
+  }
+}

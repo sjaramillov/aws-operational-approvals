@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "project": "aws-operational-approvals",
+  "created_on": "2026-09-07",
+  "cover": {
+    "method": "Original AI image generation with image_gen; project identity refined with the same tool.",
+    "prompt_summary": "Flujo escultórico de solicitudes, un punto de decisión y tres resultados, en verde esmeralda, cobre y marfil. Composición editorial amplia, título en español, identificador propio del proyecto, sin logos ni métricas ficticias.",
+    "is_runtime_evidence": false,
+    "original_preserved": true
+  },
+  "diagrams": {
+    "method": "Native editable SVG, rendered to PNG with CairoSVG.",
+    "framework": "AWS Well-Architected",
+    "official_sources": "sources.json",
+    "interpretation": "Project review; current evidence and proposed architecture are separate. No certification or score."
+  },
+  "validation": {
+    "visual_review": "All three images inspected at full artifact size.",
+    "svg_dimensions": [
+      1800,
+      1200
+    ],
+    "external_svg_resources": false,
+    "source_hashes": "sources.json",
+    "max_image_bytes": 3000000
+  },
+  "files": [
+    {
+      "file": "cover.png",
+      "sha256": "8a2024a38b24bd2e672d5eb9f5da36b37613fb14c867ab97f3a7821048b81123",
+      "bytes": 1932145,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "solution-architecture.svg",
+      "sha256": "bd0d91d54bc6feeb94b64a64fb574fe877e61d5448846df1e81efd20707ff242",
+      "bytes": 16047
+    },
+    {
+      "file": "solution-architecture.png",
+      "sha256": "2ea95eb52ac66cd1bf0a888a4f017adb053de378343924ba16e0cb8a0b2867e3",
+      "bytes": 204026,
+      "dimensions": [
+        1800,
+        1200
+      ]
+    },
+    {
+      "file": "well-architected.svg",
+      "sha256": "bc7fcb466312874a8b4262e6fd3e1037f87f137553996a073afa033c5b1b58b1",
+      "bytes": 12056
+    },
+    {
+      "file": "well-architected.png",
+      "sha256": "7ed1b8104b51ef4c1e0a80cf4fbca1ef6d66f4dd6b9f3af23f0b1b19dec77bc5",
+      "bytes": 219830,
+      "dimensions": [
+        1800,
+        1200
+      ]
+    }
+  ]
+}

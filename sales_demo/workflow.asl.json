@@ -1,0 +1,206 @@
+{
+  "Comment": "APPROVALS synthetic sales pilot: <=50 automatic, >50 durable Manager callback",
+  "QueryLanguage": "JSONPath",
+  "TimeoutSeconds": 3600,
+  "StartAt": "RequiresManager",
+  "States": {
+    "RequiresManager": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.vehicleCount",
+          "NumericGreaterThan": 50,
+          "Next": "WaitForManager"
+        }
+      ],
+      "Default": "ActivateAutomaticContract"
+    },
+    "ActivateAutomaticContract": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "${WorkerFunctionArn}",
+        "Payload": {
+          "action": "FINALIZE_APPROVED",
+          "tenantId.$": "$.tenantId",
+          "applicationId.$": "$.applicationId",
+          "actorId": "actor_system",
+          "actorRole": "MANAGER",
+          "reasonCode": "AUTO_APPROVED"
+        }
+      },
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException",
+            "Lambda.ClientExecutionTimeoutException",
+            "Lambda.TooManyRequestsException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 3,
+          "BackoffRate": 2,
+          "JitterStrategy": "FULL"
+        }
+      ],
+      "OutputPath": "$.Payload",
+      "End": true
+    },
+    "WaitForManager": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke.waitForTaskToken",
+      "Parameters": {
+        "FunctionName": "${WorkerFunctionArn}",
+        "Payload": {
+          "action": "CAPTURE_APPROVAL_TOKEN",
+          "tenantId.$": "$.tenantId",
+          "applicationId.$": "$.applicationId",
+          "taskToken.$": "$$.Task.Token"
+        }
+      },
+      "TimeoutSeconds": 3540,
+      "ResultPath": "$.managerDecision",
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException",
+            "Lambda.ClientExecutionTimeoutException",
+            "Lambda.TooManyRequestsException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 3,
+          "BackoffRate": 2,
+          "JitterStrategy": "FULL"
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": ["States.Timeout"],
+          "ResultPath": "$.callbackError",
+          "Next": "RejectApprovalTimeout"
+        },
+        {
+          "ErrorEquals": ["States.ALL"],
+          "ResultPath": "$.callbackError",
+          "Next": "TechnicalCallbackFailure"
+        }
+      ],
+      "Next": "ManagerApproved"
+    },
+    "ManagerApproved": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.managerDecision.decision",
+          "StringEquals": "APPROVE",
+          "Next": "ActivateManagerApprovedContract"
+        }
+      ],
+      "Default": "FinalizeManagerRejection"
+    },
+    "ActivateManagerApprovedContract": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "${WorkerFunctionArn}",
+        "Payload": {
+          "action": "FINALIZE_APPROVED",
+          "tenantId.$": "$.tenantId",
+          "applicationId.$": "$.applicationId",
+          "actorId.$": "$.managerDecision.actorId",
+          "actorRole.$": "$.managerDecision.actorRole",
+          "reasonCode.$": "$.managerDecision.reasonCode"
+        }
+      },
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException",
+            "Lambda.ClientExecutionTimeoutException",
+            "Lambda.TooManyRequestsException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 3,
+          "BackoffRate": 2,
+          "JitterStrategy": "FULL"
+        }
+      ],
+      "OutputPath": "$.Payload",
+      "End": true
+    },
+    "FinalizeManagerRejection": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "${WorkerFunctionArn}",
+        "Payload": {
+          "action": "FINALIZE_REJECTED",
+          "tenantId.$": "$.tenantId",
+          "applicationId.$": "$.applicationId",
+          "actorId.$": "$.managerDecision.actorId",
+          "actorRole.$": "$.managerDecision.actorRole",
+          "reasonCode.$": "$.managerDecision.reasonCode"
+        }
+      },
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException",
+            "Lambda.ClientExecutionTimeoutException",
+            "Lambda.TooManyRequestsException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 3,
+          "BackoffRate": 2,
+          "JitterStrategy": "FULL"
+        }
+      ],
+      "OutputPath": "$.Payload",
+      "End": true
+    },
+    "RejectApprovalTimeout": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "${WorkerFunctionArn}",
+        "Payload": {
+          "action": "FINALIZE_REJECTED",
+          "tenantId.$": "$.tenantId",
+          "applicationId.$": "$.applicationId",
+          "actorId": "actor_system",
+          "actorRole": "MANAGER",
+          "reasonCode": "MANAGER_APPROVAL_TIMEOUT"
+        }
+      },
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException",
+            "Lambda.ClientExecutionTimeoutException",
+            "Lambda.TooManyRequestsException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 3,
+          "BackoffRate": 2,
+          "JitterStrategy": "FULL"
+        }
+      ],
+      "OutputPath": "$.Payload",
+      "End": true
+    },
+    "TechnicalCallbackFailure": {
+      "Type": "Fail",
+      "Error": "ManagerCallbackTechnicalFailure",
+      "Cause": "The callback task failed technically; no commercial rejection was recorded."
+    }
+  }
+}

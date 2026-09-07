@@ -1,0 +1,1061 @@
+{
+  "schema_version": 1,
+  "source_id": "private-original-commercial-candidate",
+  "extraction_date": "2026-09-07",
+  "source_unchanged": true,
+  "scope": "Selected authored engineering files; third-party rights remain unverified.",
+  "files": [
+    {
+      "source_path": "sales_demo/Makefile",
+      "destination_path": "sales_demo/Makefile",
+      "source_sha256": "3539e5e5a7d538a23f898d0c8c1aeffcd4ed44230e82e98f613202623303b6b4",
+      "destination_sha256": "3539e5e5a7d538a23f898d0c8c1aeffcd4ed44230e82e98f613202623303b6b4",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/README.md",
+      "destination_path": "sales_demo/README.md",
+      "source_sha256": "1c8d1b2eab8e137d488bb8566bf2a06e4a093fafe5154d653cc5c0c6b8fe4898",
+      "destination_sha256": "77becd8b690393824ace347f846c5bca66d3a65037073fec886b3dcca45ce2a5",
+      "changes": [
+        "sanitized_and_neutralized_extraction",
+        "current_independent_product_scope_and_links"
+      ]
+    },
+    {
+      "source_path": "sales_demo/THREAT_MODEL.md",
+      "destination_path": "sales_demo/THREAT_MODEL.md",
+      "source_sha256": "715122e758c3b58e4547efba578b396065fc9af7751bbb44990c0f9aab31045a",
+      "destination_sha256": "5b6dbc1a6215d4512864c4469f826dd8ef22537b97ed9c88323aba05535822c0",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/__init__.py",
+      "destination_path": "sales_demo/__init__.py",
+      "source_sha256": "f516c61243e3a052b604158a2fdad43d8a8b02109afd5441aa006ad82755574c",
+      "destination_sha256": "814a0aac8c426595c81716a4755ee1e9d4a84afedb6bd57a8d3b412d94446135",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/backend/README.md",
+      "destination_path": "sales_demo/backend/README.md",
+      "source_sha256": "56796dda67fbcf922409b5a840e70b56e70639d756c35b2fac1a20b724926b40",
+      "destination_sha256": "1e64cb9efb8adab7326a3d738c599fbfd5a6564c5903f83a665363c77d5cb82f",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/backend/__init__.py",
+      "destination_path": "sales_demo/backend/__init__.py",
+      "source_sha256": "4e65dbda5a7f8d532d33e6c85d54874ad0637edf137a13a49eaf2723d6bef97e",
+      "destination_sha256": "a9537ce4c8c946bc4f6cc1925f061ca8ab19e8630e012b06788a7a31fe81f336",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/backend/aws_adapters.py",
+      "destination_path": "sales_demo/backend/aws_adapters.py",
+      "source_sha256": "c298a588b312baf55d2e60001bf03211776b14d50ee17ed5d131c1a03192e9f4",
+      "destination_sha256": "235c9576312e3c1f0db3efffd0e650d04fa2c730b1d5bbcabd1fdad97d4eabda",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/backend/domain.py",
+      "destination_path": "sales_demo/backend/domain.py",
+      "source_sha256": "ce50a223f31bd59e1e30e6c56f6b1663d12ee2cec24f7ecd5ed5c3e2bf4dd348",
+      "destination_sha256": "ce50a223f31bd59e1e30e6c56f6b1663d12ee2cec24f7ecd5ed5c3e2bf4dd348",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/backend/errors.py",
+      "destination_path": "sales_demo/backend/errors.py",
+      "source_sha256": "0b3a167d9c45b13c0eb5be62fa1230f31d680f28527d345e5fe9a7dee48a851f",
+      "destination_sha256": "0b3a167d9c45b13c0eb5be62fa1230f31d680f28527d345e5fe9a7dee48a851f",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/backend/lambda_api.py",
+      "destination_path": "sales_demo/backend/lambda_api.py",
+      "source_sha256": "9f3754f6530fa2bd7c9d323ecd2c9f47d14c6d3b7f987013d99eb736070977eb",
+      "destination_sha256": "ac24a8535c901ffce3afb4e3f6070388d1bb495133b86ce7f518a01729376fd2",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/backend/lambda_worker.py",
+      "destination_path": "sales_demo/backend/lambda_worker.py",
+      "source_sha256": "bf2ba10f938c77a13c26b6dbd2ba4abfc7e87e1eace4157192441d92f2410aeb",
+      "destination_sha256": "bf2ba10f938c77a13c26b6dbd2ba4abfc7e87e1eace4157192441d92f2410aeb",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/backend/local_server.py",
+      "destination_path": "sales_demo/backend/local_server.py",
+      "source_sha256": "eb4d1e1346687fa6632479a0e350fb94d1434a4199c805d035dde9c06a2cea71",
+      "destination_sha256": "2fcaa5c557bdd87f93a3b2ee64377b043ea858537ecaa2945b0e790dbf75c069",
+      "changes": [
+        "sanitized_and_neutralized_extraction",
+        "wall_clock_for_standalone_demo_instead_of_fixed_test_date"
+      ]
+    },
+    {
+      "source_path": "sales_demo/backend/memory.py",
+      "destination_path": "sales_demo/backend/memory.py",
+      "source_sha256": "021c3de6127bdcd714d17e4d9454edad1a9e163423ed16fa30241c7596f4c8a6",
+      "destination_sha256": "d32e73f9867f8f6edb57a64901947fc3da6b785381abbaf44a9c628e6e5891c2",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/backend/ports.py",
+      "destination_path": "sales_demo/backend/ports.py",
+      "source_sha256": "21d36e75d97666854c2054540c364524bb0404b4c5fdc66d21a3195b870ca357",
+      "destination_sha256": "21d36e75d97666854c2054540c364524bb0404b4c5fdc66d21a3195b870ca357",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/backend/service.py",
+      "destination_path": "sales_demo/backend/service.py",
+      "source_sha256": "46b3481d9ee111da760b2d712d486d4d644e08617709689c61246628fbca3b88",
+      "destination_sha256": "46b3481d9ee111da760b2d712d486d4d644e08617709689c61246628fbca3b88",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/openapi.yaml",
+      "destination_path": "sales_demo/openapi.yaml",
+      "source_sha256": "b57350c46d6365514a1d512b779a135e36ceb1069b81a485a3ef40ddeec0b8ba",
+      "destination_sha256": "29475f8d59c42b3d5aa8e728d8d291a7be950f1e5cc2ece5bf331be8bed04a83",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/scripts/__init__.py",
+      "destination_path": "sales_demo/scripts/__init__.py",
+      "source_sha256": "30fdfccfb37f1975a30e24e71b7cf0a84de8744ac524938bc073d85c55f7eb7f",
+      "destination_sha256": "30fdfccfb37f1975a30e24e71b7cf0a84de8744ac524938bc073d85c55f7eb7f",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/scripts/build_lambda_packages.py",
+      "destination_path": "sales_demo/scripts/build_lambda_packages.py",
+      "source_sha256": "e7cc4021d662b77b376506985fd1bd0f74763121c78104202ad051981ddead4c",
+      "destination_sha256": "e7cc4021d662b77b376506985fd1bd0f74763121c78104202ad051981ddead4c",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/scripts/validate_candidate.py",
+      "destination_path": "sales_demo/scripts/validate_candidate.py",
+      "source_sha256": "4a295fa5377745d20ece7c79934a618e76575a9be6887e5772bf839eabfa9db5",
+      "destination_sha256": "478d4bebb3cece357101f259cd38f4b31c79140a260a83401fe7f13a5fed3230",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/.terraform.lock.hcl",
+      "destination_path": "sales_demo/terraform/.terraform.lock.hcl",
+      "source_sha256": "a04d5753249b9d5cd3498e2f69d171f189fe9972b3536ccb9998f6dce7bcb789",
+      "destination_sha256": "a04d5753249b9d5cd3498e2f69d171f189fe9972b3536ccb9998f6dce7bcb789",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/terraform/activate_pilot.py",
+      "destination_path": "sales_demo/terraform/activate_pilot.py",
+      "source_sha256": "80629ac5e4b421082e1a80fc4a3415d08579c660ce5a0fbdd413ac210fdc4438",
+      "destination_sha256": "80629ac5e4b421082e1a80fc4a3415d08579c660ce5a0fbdd413ac210fdc4438",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/terraform/api.tf",
+      "destination_path": "sales_demo/terraform/api.tf",
+      "source_sha256": "ab9a02894e6047fa918dcb66d7ced93e82f8f92d2803731f211b20a23a25cda6",
+      "destination_sha256": "42b21cfe75e2cb4d81de08e7cc9bab6b881b6339fdff081418e8af37d08c165d",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/compute.tf",
+      "destination_path": "sales_demo/terraform/compute.tf",
+      "source_sha256": "b9fd7aab37a07c8148e4d1ed5cd0f341918fcf4f73b5536d576b7f3da104097e",
+      "destination_sha256": "04614e7cc99b277516a06fb4bef2ab81c2cb0283ae54ca0810a3afb8c62dd1d9",
+      "changes": [
+        "sanitized_and_neutralized_extraction",
+        "Ajuste editorial de identidad o supuesto por verificar; comportamiento conservado."
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/contract.tf",
+      "destination_path": "sales_demo/terraform/contract.tf",
+      "source_sha256": "9b335ac792f2c521db647128d06156369ee5b4211e85411edfd44b93f1787533",
+      "destination_sha256": "2abedbef79faca53f959e410adb24ce50a89a1bab34440c022967efb71867f9f",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/expiry.tf",
+      "destination_path": "sales_demo/terraform/expiry.tf",
+      "source_sha256": "6d2e3da958a4508354f6a6035bf8d872f5aab64f2d8683394bca5d732379fec2",
+      "destination_sha256": "6d2e3da958a4508354f6a6035bf8d872f5aab64f2d8683394bca5d732379fec2",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/terraform/frontend.tf",
+      "destination_path": "sales_demo/terraform/frontend.tf",
+      "source_sha256": "bbbede456fdb88de04da1bb1556d7a2aa7a2c41a987a32c93d18585544610d72",
+      "destination_sha256": "003039587d4a54ce97fba1d28bc613a17cdc001a8c22d2b7d671ce90875d054c",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/iam.tf",
+      "destination_path": "sales_demo/terraform/iam.tf",
+      "source_sha256": "a083670dd2c3a99ec5a4d7dd78111d26d789028f213f5324294ee68b1d27234f",
+      "destination_sha256": "a083670dd2c3a99ec5a4d7dd78111d26d789028f213f5324294ee68b1d27234f",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/terraform/identity.tf",
+      "destination_path": "sales_demo/terraform/identity.tf",
+      "source_sha256": "dea07dab2077ad5a12a5d3536fd7df9085af01964476d5128da0662e03e400fd",
+      "destination_sha256": "dea07dab2077ad5a12a5d3536fd7df9085af01964476d5128da0662e03e400fd",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/terraform/inventory_zero.py",
+      "destination_path": "sales_demo/terraform/inventory_zero.py",
+      "source_sha256": "73a6732c4f6573ca9c74ff83b916b90bf4c9f60f29cd14d38acdc4aad02bcf87",
+      "destination_sha256": "ca813ed5a047133cf47ead2245aaed301373dbd19973a972143d308fb625942a",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/locals.tf",
+      "destination_path": "sales_demo/terraform/locals.tf",
+      "source_sha256": "44e34a65844d1b9e443aa456297d653a5afc571950f507c5b06d56347bdbaaae",
+      "destination_sha256": "a0a294838a564d5bfac49a13451bf4053dce65df88612640f24272a7e0fcf775",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/outputs.tf",
+      "destination_path": "sales_demo/terraform/outputs.tf",
+      "source_sha256": "f2d29555a7b0526f5acd13567c0d32b67808977a120103473921d4da326967f1",
+      "destination_sha256": "f2d29555a7b0526f5acd13567c0d32b67808977a120103473921d4da326967f1",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/terraform/plan_guard.py",
+      "destination_path": "sales_demo/terraform/plan_guard.py",
+      "source_sha256": "0ddc376868d91348996b4a925fa34b46c3c7ddb7beecc5073473272fd664eba3",
+      "destination_sha256": "64bf11442ff1d8d4ca5882030c4ee8a6058c7dbed84ee6e1127c98fbc7d970d2",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/preflight.py",
+      "destination_path": "sales_demo/terraform/preflight.py",
+      "source_sha256": "efb9f002787fb47de1af4b4e6d29d36bb640f61b1fe2aefec54627ca4625b7f5",
+      "destination_sha256": "cdec98d48feb260a75e9521017e1b4c2bde3ba91d7f912bb05ad7bf43b73ec48",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/provision_users.py",
+      "destination_path": "sales_demo/terraform/provision_users.py",
+      "source_sha256": "00c53fa26f0326610364baa3145ccfa809515ec8eb67567ad60e05b8f2d1f15b",
+      "destination_sha256": "5b7f1115c25cc38fd5af2d31ecaf44ae96d8332a43ffce013589ec4e57732fd7",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/provisioning.tf",
+      "destination_path": "sales_demo/terraform/provisioning.tf",
+      "source_sha256": "b230aae888e7382515330714dacede8dac1816fd09f2370a05a852bd974e63ed",
+      "destination_sha256": "b230aae888e7382515330714dacede8dac1816fd09f2370a05a852bd974e63ed",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/terraform/publish_frontend.py",
+      "destination_path": "sales_demo/terraform/publish_frontend.py",
+      "source_sha256": "d2a6d237ed56c53ea50b2695b823ef6eb7fa43145ba0b57227e09e104535f6c7",
+      "destination_sha256": "b312dfa224a83468173e2e9a6f54c83bb71838a83f371e5ac4a1e2a9e0e0cf57",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/readiness_probe.py",
+      "destination_path": "sales_demo/terraform/readiness_probe.py",
+      "source_sha256": "c4b60e11d7b11a0699f885b9dfbfc96662dc73796f8380dc2579e4cccb208b59",
+      "destination_sha256": "deba29346e4a804559ae51967ce868b7fae27ffe9ab1ef82dfb8994b91e832af",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/storage.tf",
+      "destination_path": "sales_demo/terraform/storage.tf",
+      "source_sha256": "fb3e8fa8c8e36054a17e8e5f4d6e8c7db6bd0f4dd1a9f22817b819b72899ed46",
+      "destination_sha256": "fb3e8fa8c8e36054a17e8e5f4d6e8c7db6bd0f4dd1a9f22817b819b72899ed46",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/terraform/tests/invariants.tftest.hcl",
+      "destination_path": "sales_demo/terraform/tests/invariants.tftest.hcl",
+      "source_sha256": "6c6a34bca099ef8edba2ffeba416b2ae00c885813a3477ebc0483c0f40d76c81",
+      "destination_sha256": "78c961c15fd048ddc91a3804483b7e554b3f77b56022755fccd4a7e5c35b70de",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/tests/test_activate_pilot.py",
+      "destination_path": "sales_demo/terraform/tests/test_activate_pilot.py",
+      "source_sha256": "ad87a840db195a0066993df5fcd289dd258e4f88e7763d749125ab10ea434262",
+      "destination_sha256": "4adec57ed0fc254ed0b7db1bbf2b974a0f8b5e1e50d864e4cfe7da2170245f67",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/tests/test_inventory_zero.py",
+      "destination_path": "sales_demo/terraform/tests/test_inventory_zero.py",
+      "source_sha256": "dae95b2fff6924b3c5ba9f416dbfb34748433fd580a28c85c0d264511f21fcbc",
+      "destination_sha256": "454db4d341537a7cad567b5feacd5b5d05e17a85431391ab6f29065a7ce01a83",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/tests/test_plan_guard.py",
+      "destination_path": "sales_demo/terraform/tests/test_plan_guard.py",
+      "source_sha256": "3c5e4d4e3aff6552a2e32ae50431d9700f67638ebc845dcb30799884f0a3d8aa",
+      "destination_sha256": "ed8246fecf2f8b7719960c937049860aa0579777647a6c864f4e91f8d7f5bcb5",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/tests/test_preflight.py",
+      "destination_path": "sales_demo/terraform/tests/test_preflight.py",
+      "source_sha256": "2606c436894f36fe58237fd7138e1324e2a51a721c9d8b2ce48c1566dffa0ed5",
+      "destination_sha256": "83130db985efc6159e6df4e95eb016e5b0c1f86de64c3c49ff3a3c5a36c33b55",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/tests/test_provision_users.py",
+      "destination_path": "sales_demo/terraform/tests/test_provision_users.py",
+      "source_sha256": "a56dc916f41eb2788c50342b49bd0fc7d5a75d5aadc519dc281cc5616fb7dcbe",
+      "destination_sha256": "a62b20e73e3ce07044ad262e9b70b6f00106bca611eec916b2c59a051b4142ce",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/tests/test_publish_frontend.py",
+      "destination_path": "sales_demo/terraform/tests/test_publish_frontend.py",
+      "source_sha256": "1f6a47d5346ee648060d65745565df31d11d52ededf95ef579d73e7ad18288b9",
+      "destination_sha256": "2ffbcb03ae2ce01dcc6610d90cb046d14ce85f12ec290a8a67ca7eb870cea82d",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/tests/test_readiness_probe.py",
+      "destination_path": "sales_demo/terraform/tests/test_readiness_probe.py",
+      "source_sha256": "faee4a4a21d88e4517ccfb4a2ab830a8eebaa07af1fabbbbb8b3fef8f2bf6f27",
+      "destination_sha256": "c36f0b52ce2d00acfe75b1144029641548f65ccbd58a666a7b624d36b7c7f7cb",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/variables.tf",
+      "destination_path": "sales_demo/terraform/variables.tf",
+      "source_sha256": "99aa88acd357a5c4c0c5957696660719140aa6e324fbacdde4ac6c607de6fcb9",
+      "destination_sha256": "3e3a76bf501d854d7664865dc60497bfd84994fb271c654055d658ef552db3d5",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/versions.tf",
+      "destination_path": "sales_demo/terraform/versions.tf",
+      "source_sha256": "e61ac84e95268728cb9da5b3b0093030a3d26340c0e5e40fb8ee9c2f82c548d8",
+      "destination_sha256": "0fbabe6049e8ca1f8731382310ec5079ea9dae48fb36a04d3d0e86c2a9483194",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/terraform/workflow.tf",
+      "destination_path": "sales_demo/terraform/workflow.tf",
+      "source_sha256": "7ff397583bfd7cf59381e09e956003877cafed1d42ee1c692d201a350e44c815",
+      "destination_sha256": "7ff397583bfd7cf59381e09e956003877cafed1d42ee1c692d201a350e44c815",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/tests/__init__.py",
+      "destination_path": "sales_demo/tests/__init__.py",
+      "source_sha256": "173b98bae567074817d77a35002eb876fc9eb044428bcd67f4a248a23beab2df",
+      "destination_sha256": "173b98bae567074817d77a35002eb876fc9eb044428bcd67f4a248a23beab2df",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/tests/backend/__init__.py",
+      "destination_path": "sales_demo/tests/backend/__init__.py",
+      "source_sha256": "696118af41fc823f6fe84655b2a389ed5ca2f24cc298b7783203edd3dbd4d694",
+      "destination_sha256": "696118af41fc823f6fe84655b2a389ed5ca2f24cc298b7783203edd3dbd4d694",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/tests/backend/test_contract_artifacts.py",
+      "destination_path": "sales_demo/tests/backend/test_contract_artifacts.py",
+      "source_sha256": "30474754b999e650e8f6307b485b5000a4cfbbf5ff5cc3017aa3d4298a344200",
+      "destination_sha256": "30474754b999e650e8f6307b485b5000a4cfbbf5ff5cc3017aa3d4298a344200",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/tests/backend/test_dynamo_repository.py",
+      "destination_path": "sales_demo/tests/backend/test_dynamo_repository.py",
+      "source_sha256": "71ba84c4c74d98912477b292142093101e58869544c9d79f9e07615c61908346",
+      "destination_sha256": "6f6c65eaca46049b5f3b36df868f1a573f3fe069dc2fe8f9c317e15d730930af",
+      "changes": [
+        "replaced_synthetic_idempotency_fixture_with_explicit_low_entropy_example_for_secret_scan"
+      ]
+    },
+    {
+      "source_path": "sales_demo/tests/backend/test_http_api.py",
+      "destination_path": "sales_demo/tests/backend/test_http_api.py",
+      "source_sha256": "c6fbaf6d029a458ebd3d283599b09a9a4c23eb8c8e9cc3e08a30313cb33623bd",
+      "destination_sha256": "c6fbaf6d029a458ebd3d283599b09a9a4c23eb8c8e9cc3e08a30313cb33623bd",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/tests/backend/test_service_flows.py",
+      "destination_path": "sales_demo/tests/backend/test_service_flows.py",
+      "source_sha256": "4977a27583265e2e2c42d1f4f07091ceccdf40d31c76ca871ff5c29f98dbebfe",
+      "destination_sha256": "84a9a422ba8115477b67fa269e4ce3ef95d886f77b04c6af9bc7b442070eb564",
+      "changes": [
+        "replaced_synthetic_idempotency_fixture_with_explicit_low_entropy_example_for_secret_scan"
+      ]
+    },
+    {
+      "source_path": "sales_demo/tests/backend/test_worker_security.py",
+      "destination_path": "sales_demo/tests/backend/test_worker_security.py",
+      "source_sha256": "0eee6cfa6a39771b369c5bbd5b953e925bc83e2e755c4b35e6046b96ba00e2e5",
+      "destination_sha256": "0eee6cfa6a39771b369c5bbd5b953e925bc83e2e755c4b35e6046b96ba00e2e5",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/tests/backend/test_workflow_idempotency.py",
+      "destination_path": "sales_demo/tests/backend/test_workflow_idempotency.py",
+      "source_sha256": "69fa6e2bf4a99a9be75db0b6c3db410df1e7e50174c8c2a479e2c53d241ec12d",
+      "destination_sha256": "61e10afe8adf16f24d284a3e799a8c6869469c3072e543c8d2965b22bd0eb8dc",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/tests/test_candidate_contract.py",
+      "destination_path": "sales_demo/tests/test_candidate_contract.py",
+      "source_sha256": "a9d56c916014941805b77d09f37dbd14c1e9c934d07d887c0d8d381de5747beb",
+      "destination_sha256": "a9d56c916014941805b77d09f37dbd14c1e9c934d07d887c0d8d381de5747beb",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/tests/test_lambda_packages.py",
+      "destination_path": "sales_demo/tests/test_lambda_packages.py",
+      "source_sha256": "05b323a339eb9c19581e3191379b7c36a21f9b0e28988744ac0491d912799a48",
+      "destination_sha256": "05b323a339eb9c19581e3191379b7c36a21f9b0e28988744ac0491d912799a48",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/.env.example",
+      "destination_path": "sales_demo/web/.env.example",
+      "source_sha256": "e4e69a2f3a1670883c575ef2e3665c112c88682023978561b7283ff66e647f2c",
+      "destination_sha256": "e4e69a2f3a1670883c575ef2e3665c112c88682023978561b7283ff66e647f2c",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/README.md",
+      "destination_path": "sales_demo/web/README.md",
+      "source_sha256": "ca714df1922e2148cada6eac63bdced5515c937f457d04f90bb89a511c3d121c",
+      "destination_sha256": "feea3907f9c0c35f9daf86c3fdc53f71a30b785599a615ebd557c1ac49eee4d6",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/e2e/deployed.spec.mjs",
+      "destination_path": "sales_demo/web/e2e/deployed.spec.mjs",
+      "source_sha256": "10ab663885a77f7f9224c9366563fbfe3423612c6a4dc20fbdcf1aaa49c755f7",
+      "destination_sha256": "307e8940289795efe9ac6099afd60ae978443124f827170791276acf8d1c0171",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/e2e/deployedConfig.mjs",
+      "destination_path": "sales_demo/web/e2e/deployedConfig.mjs",
+      "source_sha256": "ecf8a8ae666d52c7f9cb33b4bc030db08c3e0e631b9e48dbd47ffe15599d528c",
+      "destination_sha256": "8300c81c15c6437d5c25b9c1475aba458b169883866ebe4bdc088b647a7340e0",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/e2e/deployedConfig.test.mjs",
+      "destination_path": "sales_demo/web/e2e/deployedConfig.test.mjs",
+      "source_sha256": "bcaa244b80bbec454871b154f1f7b9c741235df540cc26d7d15df04c695b8941",
+      "destination_sha256": "a91947309a2085997c9b8d1bdce8d4c5b23c4cd0dd427bb8f92a8411b59f4d0f",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/e2e/flows.spec.ts",
+      "destination_path": "sales_demo/web/e2e/flows.spec.ts",
+      "source_sha256": "413b2d8cebd667a63ea2dc8a093ec1b564aa615647cf06ffa778cdb39dad9bd1",
+      "destination_sha256": "5125360790d15cc58602ff7f72564e6b131edd58708b0357cdd3fd49544a852a",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/e2e/responsive.spec.ts",
+      "destination_path": "sales_demo/web/e2e/responsive.spec.ts",
+      "source_sha256": "d9b334e913a7d9d775c90e4db497c92554fbb44e5727b02b5ad9162450acde3d",
+      "destination_sha256": "d9b334e913a7d9d775c90e4db497c92554fbb44e5727b02b5ad9162450acde3d",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/index.html",
+      "destination_path": "sales_demo/web/index.html",
+      "source_sha256": "94746398d923e965c5e9770dee775dd47ff9c7a8eaea65a3fb2f5aeb4c487908",
+      "destination_sha256": "d94e0905f7b29764664152c7154a9b026b4ba232e7a917e7af41342961297604",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/package-lock.json",
+      "destination_path": "sales_demo/web/package-lock.json",
+      "source_sha256": "5ac4aafad6f55d2ccacd0793d98c9f0e6f223c847a20e601c6296f62afb5653f",
+      "destination_sha256": "919e84fc328e3a550f4045bcab239bda365c313ca54d9609ac2961bb8bc684e4",
+      "changes": [
+        "sanitized_and_neutralized_extraction",
+        "exact_versions_from_existing_lockfile"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/package.json",
+      "destination_path": "sales_demo/web/package.json",
+      "source_sha256": "63e6f0acc41fdd232695bce41d906c75766d83865d075e3097b8ecbdfd846530",
+      "destination_sha256": "7c19a807e18074c5ccf21ebd724d1563812b57dea6bc56be5ff56821321b9cd9",
+      "changes": [
+        "sanitized_and_neutralized_extraction",
+        "exact_versions_from_existing_lockfile"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/playwright.config.ts",
+      "destination_path": "sales_demo/web/playwright.config.ts",
+      "source_sha256": "231e067c5328b7e068b8d0cae7acccf18abe7748b67304a2263ad46d5cb99183",
+      "destination_sha256": "060d41af39b7f022f580d8d8b1348c62bd43373e7eaca6f05f93e856b2059604",
+      "changes": [
+        "exclusive_local_e2e_server_no_stale_reuse"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/playwright.deployed.config.mjs",
+      "destination_path": "sales_demo/web/playwright.deployed.config.mjs",
+      "source_sha256": "bfb786d183e353ac33aa03b172411675178621e85b2c43cb05a7685de260fde4",
+      "destination_sha256": "c79169e86bcf27ff04c4e2fdb8bb1249a5a61538206fb6eec9e44299879daa37",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/public/manifest.webmanifest",
+      "destination_path": "sales_demo/web/public/manifest.webmanifest",
+      "source_sha256": "1820ca911d5572ed9c4a06ad528a53443eba020c7bc13f8db85158a0425d8494",
+      "destination_sha256": "453fc01ba499811e8a46e74e221693fde2771c4e6abd33d4151461fa8babf6e4",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/public/sw.js",
+      "destination_path": "sales_demo/web/public/sw.js",
+      "source_sha256": "e67528bd22b7b43e75760ca8b83ccc54d92450c46c79a43fa2b9de2332e4e159",
+      "destination_sha256": "032b9a6cc241d5d579d868447589aad942869216ef1174848dfa92136f02948f",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/runtime-config.example.json",
+      "destination_path": "sales_demo/web/runtime-config.example.json",
+      "source_sha256": "65aea91f6cdc556bcee34fa56377503da2a7b64adfcd8cbbb235b91bc89c668c",
+      "destination_sha256": "f6e1e48f65c768f086fdcd7cc8a032a905f665f658f58d35e04e0bccb89ff3f9",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/scripts/write-runtime-config.mjs",
+      "destination_path": "sales_demo/web/scripts/write-runtime-config.mjs",
+      "source_sha256": "719603b2bb2ed4d0bfd7e839aacf6ae4fccf75d309b74c6d36a60f7978aed0bd",
+      "destination_sha256": "719603b2bb2ed4d0bfd7e839aacf6ae4fccf75d309b74c6d36a60f7978aed0bd",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/App.test.tsx",
+      "destination_path": "sales_demo/web/src/App.test.tsx",
+      "source_sha256": "bb1d055fdfb79a646fc9200c4e750bd8ed7eee77a3e286b7cbcc04d7bcb03b88",
+      "destination_sha256": "5072a64beed5aeba825f40063c49dac78d98a7b3e9f57da3f894f36f73f4dbbf",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/src/App.tsx",
+      "destination_path": "sales_demo/web/src/App.tsx",
+      "source_sha256": "c92e79da1762f45693f85ae20e1f386ce802608e4b310f49851551037a6eeed6",
+      "destination_sha256": "c92e79da1762f45693f85ae20e1f386ce802608e4b310f49851551037a6eeed6",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/api/demo.test.ts",
+      "destination_path": "sales_demo/web/src/api/demo.test.ts",
+      "source_sha256": "b2f7e1fbde1071a5eb6e5b675eded4f8c206b206007b34be1eb84c547c56672b",
+      "destination_sha256": "b2f7e1fbde1071a5eb6e5b675eded4f8c206b206007b34be1eb84c547c56672b",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/api/demo.ts",
+      "destination_path": "sales_demo/web/src/api/demo.ts",
+      "source_sha256": "3575ea6617870d4ef3e2b7efe21dde271b076ec4242bc0d169930a8a0ed3d041",
+      "destination_sha256": "69cfe46ef5294fd66bb2b0ee0613d7904ce8eccef3bdc4704df6b199499ef63f",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/src/api/http.test.ts",
+      "destination_path": "sales_demo/web/src/api/http.test.ts",
+      "source_sha256": "edca10258ff1357b0dbe83930b97fbfb34cd05f59c6da2b8c5b3ce4c46c49d0a",
+      "destination_sha256": "edca10258ff1357b0dbe83930b97fbfb34cd05f59c6da2b8c5b3ce4c46c49d0a",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/api/http.ts",
+      "destination_path": "sales_demo/web/src/api/http.ts",
+      "source_sha256": "1862a57455807758c8e39bcb824befe74d2698df708c100b6cad6fed32bead85",
+      "destination_sha256": "1862a57455807758c8e39bcb824befe74d2698df708c100b6cad6fed32bead85",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/api/pollDecision.test.ts",
+      "destination_path": "sales_demo/web/src/api/pollDecision.test.ts",
+      "source_sha256": "8e6e2c77f9d93c5155680c72b300865622c408691eff69daae98bce98b994b34",
+      "destination_sha256": "8e6e2c77f9d93c5155680c72b300865622c408691eff69daae98bce98b994b34",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/api/pollDecision.ts",
+      "destination_path": "sales_demo/web/src/api/pollDecision.ts",
+      "source_sha256": "e031a11621529e7950330b4d34a20cb477b5c3d852fb4a3273ab36f25c61271f",
+      "destination_sha256": "e031a11621529e7950330b4d34a20cb477b5c3d852fb4a3273ab36f25c61271f",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/auth/AuthContext.tsx",
+      "destination_path": "sales_demo/web/src/auth/AuthContext.tsx",
+      "source_sha256": "821ae3309b35d250eecf9aeecbad4f565b395efc764e95c6c7e744a3522f2258",
+      "destination_sha256": "5f28f5193c6b25c662a4b78d52bee3df69a990a17ca708213b5ed9a9090b36ca",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/src/auth/pkce.test.ts",
+      "destination_path": "sales_demo/web/src/auth/pkce.test.ts",
+      "source_sha256": "69031fe14638e27e552e5fef5a02ce2b546812a04aa190f790ec5294c4216663",
+      "destination_sha256": "d2c3f42920d837a54730d948106ca749db1ecf2f16afe1d102362c8f35f2d559",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/src/auth/pkce.ts",
+      "destination_path": "sales_demo/web/src/auth/pkce.ts",
+      "source_sha256": "744f6cd672be2760c1f3a3425465eb2eb4c8bb8bb65d54cf18a2cdfa307e97f3",
+      "destination_sha256": "5668957d679bff47970f6a785b95e38fab76446ce5b15a7976976373452e6e24",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/src/components/AppShell.test.tsx",
+      "destination_path": "sales_demo/web/src/components/AppShell.test.tsx",
+      "source_sha256": "513d15242ca4f42cb7a588eac2a25e95fc82c3715351a642571a28a7a995c984",
+      "destination_sha256": "513d15242ca4f42cb7a588eac2a25e95fc82c3715351a642571a28a7a995c984",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/components/AppShell.tsx",
+      "destination_path": "sales_demo/web/src/components/AppShell.tsx",
+      "source_sha256": "f5d74ae163caba666a248f8c7d37e0706f8521316919a79b53b185eff9e71a5e",
+      "destination_sha256": "5faadcf6d2bdb2a5dcd49f87ab82a07d417566b8da2d81019c1b3795654b128e",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/src/components/AsyncStates.tsx",
+      "destination_path": "sales_demo/web/src/components/AsyncStates.tsx",
+      "source_sha256": "ca1bbacd4946707a215bbee0f4a44ab6ab6e7a546bec9f56fa6ea885dfe2417b",
+      "destination_sha256": "ca1bbacd4946707a215bbee0f4a44ab6ab6e7a546bec9f56fa6ea885dfe2417b",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/components/AuditTimeline.tsx",
+      "destination_path": "sales_demo/web/src/components/AuditTimeline.tsx",
+      "source_sha256": "04261e0e80676ec72841ef7c64b1b45f281d9c313361352646779cda04b2e307",
+      "destination_sha256": "04261e0e80676ec72841ef7c64b1b45f281d9c313361352646779cda04b2e307",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/components/PageHeader.tsx",
+      "destination_path": "sales_demo/web/src/components/PageHeader.tsx",
+      "source_sha256": "2844b154db018f0e1a8af27d3437b640cb698beb3fce142b5b0e80038fe695e2",
+      "destination_sha256": "2844b154db018f0e1a8af27d3437b640cb698beb3fce142b5b0e80038fe695e2",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/components/StatusChip.test.tsx",
+      "destination_path": "sales_demo/web/src/components/StatusChip.test.tsx",
+      "source_sha256": "fc7645ff12cb6e5ae3daea77133ac3ee6e96b2d7c57dda7052c8180a49237524",
+      "destination_sha256": "fc7645ff12cb6e5ae3daea77133ac3ee6e96b2d7c57dda7052c8180a49237524",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/components/StatusChip.tsx",
+      "destination_path": "sales_demo/web/src/components/StatusChip.tsx",
+      "source_sha256": "5a11b48105927a97a40674e16491422e4b0bc35f1569cefa8be3be05bc4307b1",
+      "destination_sha256": "5a11b48105927a97a40674e16491422e4b0bc35f1569cefa8be3be05bc4307b1",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/domain.ts",
+      "destination_path": "sales_demo/web/src/domain.ts",
+      "source_sha256": "47ab687e8242720fb8a083239f39b71bb6cc20a3be64365376ff8265d71983bd",
+      "destination_sha256": "1435261095c2bd297e37068a1a094193112059dc1919a166b5bfa2e3d88e29b3",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/src/format.ts",
+      "destination_path": "sales_demo/web/src/format.ts",
+      "source_sha256": "b122c597866fdd56f8abf1338cb2c87430dd6ac40c75a253b716560fc6cbe788",
+      "destination_sha256": "b122c597866fdd56f8abf1338cb2c87430dd6ac40c75a253b716560fc6cbe788",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/main.tsx",
+      "destination_path": "sales_demo/web/src/main.tsx",
+      "source_sha256": "8749b15ebc99d6083ac4781953283a0526ed3be58792bebff385b3fc30d709c5",
+      "destination_sha256": "8749b15ebc99d6083ac4781953283a0526ed3be58792bebff385b3fc30d709c5",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/pages/ApplicationDetailPage.tsx",
+      "destination_path": "sales_demo/web/src/pages/ApplicationDetailPage.tsx",
+      "source_sha256": "c70edfbca2abf0dfb618e18214ac19520be4e134b522b29310602d50132eb4d2",
+      "destination_sha256": "cfb76ee6335685bbe8bc051f7a18faaa00cb90bdf4d4250f99012223b9b3da0c",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/src/pages/ApplicationsPage.tsx",
+      "destination_path": "sales_demo/web/src/pages/ApplicationsPage.tsx",
+      "source_sha256": "345ec9fb84e811365bcd8177af70d6f81d21199c50252ac6ad3fde92c0fc2267",
+      "destination_sha256": "345ec9fb84e811365bcd8177af70d6f81d21199c50252ac6ad3fde92c0fc2267",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/pages/ApprovalDecisionPage.test.tsx",
+      "destination_path": "sales_demo/web/src/pages/ApprovalDecisionPage.test.tsx",
+      "source_sha256": "4d2f0424bcca0aebb2886c0e7b007f2cfd00323c2106ae18159cb1da86e9726a",
+      "destination_sha256": "4d2f0424bcca0aebb2886c0e7b007f2cfd00323c2106ae18159cb1da86e9726a",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/pages/ApprovalDecisionPage.tsx",
+      "destination_path": "sales_demo/web/src/pages/ApprovalDecisionPage.tsx",
+      "source_sha256": "3452cf721caa5760a684b5fd0a4e9d361a1a1ce08b15d7d3288d9d5c8218fee7",
+      "destination_sha256": "c1d21186838a3cb69facac48b7c92745cefb77d7a0aa77e8a6505f0b0675a7c5",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/src/pages/ApprovalsPage.tsx",
+      "destination_path": "sales_demo/web/src/pages/ApprovalsPage.tsx",
+      "source_sha256": "773727a4cdb8b1c8b923047b075e89382d562121696a4bfd8c14773cbea484aa",
+      "destination_sha256": "773727a4cdb8b1c8b923047b075e89382d562121696a4bfd8c14773cbea484aa",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/pages/AuthCallbackPage.tsx",
+      "destination_path": "sales_demo/web/src/pages/AuthCallbackPage.tsx",
+      "source_sha256": "777ffb634acd28ab87a28b7ee49306f30904fc2135d7b179851ec34ad4bb495c",
+      "destination_sha256": "777ffb634acd28ab87a28b7ee49306f30904fc2135d7b179851ec34ad4bb495c",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/pages/LoginPage.tsx",
+      "destination_path": "sales_demo/web/src/pages/LoginPage.tsx",
+      "source_sha256": "fe0bf7632ea608d7a70c3a6ff7fe66064eebc0f5e44fc82d7c9443e96603f442",
+      "destination_sha256": "01a324fde54c844dbae4e023cf35dd07416c11d06c16321398746094e670f4b2",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/src/pages/NewApplicationPage.tsx",
+      "destination_path": "sales_demo/web/src/pages/NewApplicationPage.tsx",
+      "source_sha256": "a28343f9e8173ba02f67e76ee203db5065045d5719bd2c324438d4261ddfb561",
+      "destination_sha256": "a28343f9e8173ba02f67e76ee203db5065045d5719bd2c324438d4261ddfb561",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/pages/PlanPlusPage.tsx",
+      "destination_path": "sales_demo/web/src/pages/PlanPlusPage.tsx",
+      "source_sha256": "2db6d647cbe6f547861997ddad156ad4bf0186b3263f8f239ccd79d96e8de0f8",
+      "destination_sha256": "88f60390700cc8415a748b271847abaf17be8bec18f77f31291d5a7148045ae0",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/src/runtime.ts",
+      "destination_path": "sales_demo/web/src/runtime.ts",
+      "source_sha256": "12485158842dc4e7f1bc342b08661ee2692c5fb031c7db893e6109c7c2fa34bd",
+      "destination_sha256": "12485158842dc4e7f1bc342b08661ee2692c5fb031c7db893e6109c7c2fa34bd",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/runtimeConfig.test.ts",
+      "destination_path": "sales_demo/web/src/runtimeConfig.test.ts",
+      "source_sha256": "5d91d6830372bac5c05b5ca8dedebb9495f8ca9796a62ec2cbcd30019c701793",
+      "destination_sha256": "00a5fc9339394aad781518a94a9efcf924d6333959665de52674530f468fa120",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/src/runtimeConfig.ts",
+      "destination_path": "sales_demo/web/src/runtimeConfig.ts",
+      "source_sha256": "441b357ee024125231276c64f6dbf523c0439bf3a652eb23ed6ecf5aaa8510bb",
+      "destination_sha256": "441b357ee024125231276c64f6dbf523c0439bf3a652eb23ed6ecf5aaa8510bb",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/styles.css",
+      "destination_path": "sales_demo/web/src/styles.css",
+      "source_sha256": "8357582af3b109c46e0a0809e75bcf0d8c731c9156e031f095cccae3f58aa009",
+      "destination_sha256": "b76f723e069e2d8b8480d9096946a9ec9c2363bd75c5cf73c8dc8cea973c625a",
+      "changes": [
+        "sanitized_and_neutralized_extraction",
+        "green_neutral_identity_preserving_layout"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/src/test/setup.ts",
+      "destination_path": "sales_demo/web/src/test/setup.ts",
+      "source_sha256": "f3f06bfe3aa7e185bd3bc501fb1ffe6c6fad659602b42b46a2e85cb3a9d7ad13",
+      "destination_sha256": "f3f06bfe3aa7e185bd3bc501fb1ffe6c6fad659602b42b46a2e85cb3a9d7ad13",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/src/vite-env.d.ts",
+      "destination_path": "sales_demo/web/src/vite-env.d.ts",
+      "source_sha256": "2359c90e7967490d396fdb80c65a3c18053581af8d1776e2f9d2d230b73aaef1",
+      "destination_sha256": "2359c90e7967490d396fdb80c65a3c18053581af8d1776e2f9d2d230b73aaef1",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/tsconfig.app.json",
+      "destination_path": "sales_demo/web/tsconfig.app.json",
+      "source_sha256": "fcfd96666194e5e0c5c71e2e3a700bc463d85d13deff776dc0a1e1477f3f922e",
+      "destination_sha256": "fcfd96666194e5e0c5c71e2e3a700bc463d85d13deff776dc0a1e1477f3f922e",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/tsconfig.json",
+      "destination_path": "sales_demo/web/tsconfig.json",
+      "source_sha256": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808",
+      "destination_sha256": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/tsconfig.node.json",
+      "destination_path": "sales_demo/web/tsconfig.node.json",
+      "source_sha256": "be77f1f9857e55565fd1caeb50e9f84e905aa96bfb21b996b93d36c1d4cbf8f9",
+      "destination_sha256": "be77f1f9857e55565fd1caeb50e9f84e905aa96bfb21b996b93d36c1d4cbf8f9",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/web/vite.config.ts",
+      "destination_path": "sales_demo/web/vite.config.ts",
+      "source_sha256": "1bbcda4f6efbcfe17e81fbea0455d6d5bbd3477bb1f98ff34dff4f3bf4e789b5",
+      "destination_sha256": "1bbcda4f6efbcfe17e81fbea0455d6d5bbd3477bb1f98ff34dff4f3bf4e789b5",
+      "changes": []
+    },
+    {
+      "source_path": "sales_demo/workflow.asl.json",
+      "destination_path": "sales_demo/workflow.asl.json",
+      "source_sha256": "9c967660fe65203c9152f41444015436b55a00c814115c81abfe2b554becbb2b",
+      "destination_sha256": "840aa53c4d4a7d4720a98282f2312d3951cca9377007bbc4912718b212ba5374",
+      "changes": [
+        "sanitized_and_neutralized_extraction"
+      ]
+    },
+    {
+      "source_path": "PRODUCT.md",
+      "destination_path": "docs/base/PRODUCT.md",
+      "source_sha256": "92e094d8d076b907de98ce0ebb42c9f1cf69f6a8844dd4a858a9be2b9a89db24",
+      "destination_sha256": "6fde5575a7856ed5bb3690326bb8e0d5370bff7bbc3ce5c9cef8706eabf67277",
+      "changes": [
+        "sanitized_and_neutralized_extraction",
+        "preserved_base_with_scope_notice"
+      ]
+    },
+    {
+      "source_path": "DESIGN.md",
+      "destination_path": "docs/base/DESIGN.md",
+      "source_sha256": "07da3b0d97cdb37775aa04d0c5cc25c6cd1323eb7b27e4f924addcc942fde2f1",
+      "destination_sha256": "6400f1729512cb3c3673b3b9cc984d96d88409c7086b587f0dc41d93181fc6c8",
+      "changes": [
+        "sanitized_and_neutralized_extraction",
+        "preserved_base_with_scope_notice"
+      ]
+    },
+    {
+      "source_path": "sales_demo/README.md",
+      "destination_path": "docs/base/commercial-candidate.md",
+      "source_sha256": "1c8d1b2eab8e137d488bb8566bf2a06e4a093fafe5154d653cc5c0c6b8fe4898",
+      "destination_sha256": "79c0d2dd2fe44b1324b8eda11f32be590b4ee9c435aa6d796f91d6aedae9d58c",
+      "changes": [
+        "sanitized_and_neutralized_extraction",
+        "preserved_base_with_scope_notice"
+      ]
+    },
+    {
+      "source_path": "sales_demo/THREAT_MODEL.md",
+      "destination_path": "docs/base/threat-model.md",
+      "source_sha256": "715122e758c3b58e4547efba578b396065fc9af7751bbb44990c0f9aab31045a",
+      "destination_sha256": "a6298936cedd8ba24da6aac889bccef8e77840e45511176f46f1218ed96bbe53",
+      "changes": [
+        "sanitized_and_neutralized_extraction",
+        "preserved_base_with_scope_notice"
+      ]
+    },
+    {
+      "source_path": "sales_demo/backend/README.md",
+      "destination_path": "docs/base/backend.md",
+      "source_sha256": "56796dda67fbcf922409b5a840e70b56e70639d756c35b2fac1a20b724926b40",
+      "destination_sha256": "1abb4ffb71a91a54598d92638151099867e5dcc558dd49183378da7035477462",
+      "changes": [
+        "sanitized_and_neutralized_extraction",
+        "preserved_base_with_scope_notice"
+      ]
+    },
+    {
+      "source_path": "sales_demo/web/README.md",
+      "destination_path": "docs/base/frontend.md",
+      "source_sha256": "ca714df1922e2148cada6eac63bdced5515c937f457d04f90bb89a511c3d121c",
+      "destination_sha256": "e1943c41bb1f9963d92274e1e15c36f3f41e27db9bd27162e70dff2a46d99336",
+      "changes": [
+        "sanitized_and_neutralized_extraction",
+        "preserved_base_with_scope_notice"
+      ]
+    },
+    {
+      "source_path": ".tflint.hcl",
+      "destination_path": ".tflint.hcl",
+      "source_sha256": "87ae9830419e8507096414e14e5b79b131a9d5ecd63cf66e6a749eabee82a506",
+      "destination_sha256": "87ae9830419e8507096414e14e5b79b131a9d5ecd63cf66e6a749eabee82a506",
+      "changes": []
+    }
+  ],
+  "excluded_groups": [
+    {
+      "category": "private-context-documents",
+      "reason": "Private documents unrelated to the independent product."
+    },
+    {
+      "paths": [
+        "terraform/*.tfplan*",
+        "**/*.tfstate*",
+        "**/*.tfvars",
+        "**/.env* except .env.example",
+        "**/.aws/",
+        "evidence/private or raw artifacts"
+      ],
+      "reason": "Operational identifiers, private plans/state/configuration and raw logs."
+    },
+    {
+      "category": "source-identity-assets",
+      "reason": "Source logo not reused; new generic geometric glyph authored for this extraction."
+    },
+    {
+      "paths": [
+        "node_modules/",
+        ".venv/",
+        ".terraform/",
+        "build/",
+        "dist/",
+        "__pycache__/",
+        "test-results/",
+        "playwright-report/"
+      ],
+      "reason": "Vendor/runtime caches and generated artifacts are not redistributed."
+    },
+    {
+      "paths": [
+        "guardrails/",
+        "src/",
+        "terraform/"
+      ],
+      "reason": "Other workload and original account bootstrap not included; external commercial guardrails contract remains a documented AWS prerequisite."
+    }
+  ],
+  "new_files_note": "New commercial documentation, independent identity asset, root commands, smoke and manifest verifier are authored for this extraction and are not source copies."
+}

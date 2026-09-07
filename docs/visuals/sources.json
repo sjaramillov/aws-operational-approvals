@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "project": "aws-operational-approvals",
+  "human_title": "Aprobaciones operativas",
+  "consulted_on": "2026-09-07",
+  "display_date": "07-09-2026",
+  "artifacts": [
+    "solution-architecture.svg",
+    "well-architected.svg"
+  ],
+  "official_sources": [
+    {
+      "id": "WA-OVERVIEW",
+      "title": "AWS Well-Architected Framework",
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
+      "supports": "Alcance del marco y revisión constructiva; no es un mecanismo de auditoría.",
+      "publisher": "Amazon Web Services",
+      "verified_by": "web_open",
+      "consulted_on": "2026-09-07"
+    },
+    {
+      "id": "WA-PILLARS",
+      "title": "Los pilares del marco",
+      "url": "https://docs.aws.amazon.com/es_es/wellarchitected/latest/framework/the-pillars-of-the-framework.html",
+      "supports": "Nombres oficiales en español y conjunto exacto de seis pilares.",
+      "publisher": "Amazon Web Services",
+      "verified_by": "web_open",
+      "consulted_on": "2026-09-07"
+    },
+    {
+      "id": "WA-OPS",
+      "title": "Excelencia operativa",
+      "url": "https://docs.aws.amazon.com/es_es/wellarchitected/latest/framework/operational-excellence.html",
+      "supports": "Marco para revisar operación y evolución del producto.",
+      "publisher": "Amazon Web Services",
+      "verified_by": "web_open",
+      "consulted_on": "2026-09-07"
+    },
+    {
+      "id": "WA-SEC",
+      "title": "Seguridad",
+      "url": "https://docs.aws.amazon.com/es_es/wellarchitected/latest/framework/security.html",
+      "supports": "Marco de protección de datos, sistemas y activos.",
+      "publisher": "Amazon Web Services",
+      "verified_by": "web_open",
+      "consulted_on": "2026-09-07"
+    },
+    {
+      "id": "WA-REL",
+      "title": "Fiabilidad",
+      "url": "https://docs.aws.amazon.com/es_es/wellarchitected/latest/framework/reliability.html",
+      "supports": "Marco de ejecución correcta y consistente durante el ciclo de vida.",
+      "publisher": "Amazon Web Services",
+      "verified_by": "web_open",
+      "consulted_on": "2026-09-07"
+    },
+    {
+      "id": "WA-PERF",
+      "title": "Eficiencia del rendimiento",
+      "url": "https://docs.aws.amazon.com/es_es/wellarchitected/latest/framework/performance-efficiency.html",
+      "supports": "Uso de recursos acorde con la demanda y requisitos de desempeño.",
+      "publisher": "Amazon Web Services",
+      "verified_by": "web_open",
+      "consulted_on": "2026-09-07"
+    },
+    {
+      "id": "WA-COST",
+      "title": "Optimización de costos",
+      "url": "https://docs.aws.amazon.com/es_es/wellarchitected/latest/framework/cost-optimization.html",
+      "supports": "Revisión del valor entregado respecto a los costos de operación.",
+      "publisher": "Amazon Web Services",
+      "verified_by": "web_open",
+      "consulted_on": "2026-09-07"
+    },
+    {
+      "id": "WA-SUS",
+      "title": "Sostenibilidad",
+      "url": "https://docs.aws.amazon.com/es_es/wellarchitected/latest/framework/sustainability.html",
+      "supports": "Revisión del consumo de recursos y su impacto medioambiental.",
+      "publisher": "Amazon Web Services",
+      "verified_by": "web_open",
+      "consulted_on": "2026-09-07"
+    },
+    {
+      "id": "SUS05-BP03",
+      "title": "Use managed services",
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sus_sus_hardware_a4.html",
+      "supports": "Servicios administrados como decisión a evaluar, sin inferir beneficios ambientales medidos.",
+      "publisher": "Amazon Web Services",
+      "verified_by": "web_open",
+      "consulted_on": "2026-09-07"
+    },
+    {
+      "id": "SF-CALLBACK",
+      "title": "Discover service integration patterns in Step Functions",
+      "url": "https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html",
+      "supports": "Standard admite waitForTaskToken; callback mediante API del servicio.",
+      "publisher": "Amazon Web Services",
+      "verified_by": "web_open",
+      "consulted_on": "2026-09-07"
+    },
+    {
+      "id": "CF-OAC",
+      "title": "Restrict access to an Amazon S3 origin",
+      "url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html",
+      "supports": "Origen S3 regular privado con OAC y política acotada a la distribución.",
+      "publisher": "Amazon Web Services",
+      "verified_by": "web_open",
+      "consulted_on": "2026-09-07"
+    },
+    {
+      "id": "COGNITO-PKCE",
+      "title": "The redirect and authorization endpoint",
+      "url": "https://docs.aws.amazon.com/cognito/latest/developerguide/authorization-endpoint.html",
+      "supports": "Intercambio de autorización del cliente de navegador y PKCE.",
+      "publisher": "Amazon Web Services",
+      "verified_by": "web_open",
+      "consulted_on": "2026-09-07"
+    },
+    {
+      "id": "API-JWT",
+      "title": "Control access to HTTP APIs with JWT authorizers",
+      "url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-jwt-authorizer.html",
+      "supports": "Validación JWT y scopes de las rutas de negocio.",
+      "publisher": "Amazon Web Services",
+      "verified_by": "web_open",
+      "consulted_on": "2026-09-07"
+    },
+    {
+      "id": "API-THROTTLE",
+      "title": "Throttle requests to your HTTP APIs",
+      "url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-throttling.html",
+      "supports": "Throttling como objetivo best effort; no prueba un límite absoluto de costos.",
+      "publisher": "Amazon Web Services",
+      "verified_by": "web_open",
+      "consulted_on": "2026-09-07"
+    }
+  ],
+  "local_sources": [
+    {
+      "path": "docs/architecture.md",
+      "supports": "Separación de superficies actuales, candidato AWS y bootstrap pendiente.",
+      "scope": "local code or recorded evidence; no new runtime verification",
+      "sha256": "f102dd4bbd52a791578eaacec919810bd4500f3ca0f16f71ffae7616ead49863"
+    },
+    {
+      "path": "evidence/status.md",
+      "supports": "Alcance y resultados locales por tipo de control.",
+      "scope": "local code or recorded evidence; no new runtime verification",
+      "sha256": "7df733fd430edd994212ff53ab29c4fb497f4251547ac95a26f1637f62bf3ce5"
+    },
+    {
+      "path": "evidence/validation-local.json",
+      "supports": "Detalle de pruebas, entorno y limitaciones.",
+      "scope": "local code or recorded evidence; no new runtime verification",
+      "sha256": "f557d1b579cbeb22c7f6a5860bf458e7b1fc9561129de9544fdfb9b023691607"
+    },
+    {
+      "path": "sales_demo/web/src/api/demo.ts",
+      "supports": "Adaptador de navegador basado en localStorage.",
+      "scope": "local code or recorded evidence; no new runtime verification",
+      "sha256": "69cfe46ef5294fd66bb2b0ee0613d7904ce8eccef3bdc4704df6b199499ef63f"
+    },
+    {
+      "path": "sales_demo/backend/local_server.py",
+      "supports": "API en loopback con identidad exclusivamente sintética.",
+      "scope": "local code or recorded evidence; no new runtime verification",
+      "sha256": "2fcaa5c557bdd87f93a3b2ee64377b043ea858537ecaa2945b0e790dbf75c069"
+    },
+    {
+      "path": "sales_demo/backend/memory.py",
+      "supports": "Repositorio y callback locales; reloj inyectado para pruebas.",
+      "scope": "local code or recorded evidence; no new runtime verification",
+      "sha256": "d32e73f9867f8f6edb57a64901947fc3da6b785381abbaf44a9c628e6e5891c2"
+    },
+    {
+      "path": "sales_demo/backend/aws_adapters.py",
+      "supports": "DynamoDB, despacho de decisión y envío de callback a Step Functions.",
+      "scope": "local code or recorded evidence; no new runtime verification",
+      "sha256": "235c9576312e3c1f0db3efffd0e650d04fa2c730b1d5bbcabd1fdad97d4eabda"
+    },
+    {
+      "path": "sales_demo/backend/service.py",
+      "supports": "Autorización, idempotencia, aceptación asíncrona y finalización.",
+      "scope": "local code or recorded evidence; no new runtime verification",
+      "sha256": "46b3481d9ee111da760b2d712d486d4d644e08617709689c61246628fbca3b88"
+    },
+    {
+      "path": "sales_demo/workflow.asl.json",
+      "supports": "Regla 50/51, callback humano, reintentos y límite de duración.",
+      "scope": "local code or recorded evidence; no new runtime verification",
+      "sha256": "840aa53c4d4a7d4720a98282f2312d3951cca9377007bbc4912718b212ba5374"
+    },
+    {
+      "path": "sales_demo/terraform/api.tf",
+      "supports": "HTTP API/JWT, métricas y objetivos de throttling.",
+      "scope": "local code or recorded evidence; no new runtime verification",
+      "sha256": "42b21cfe75e2cb4d81de08e7cc9bab6b881b6339fdff081418e8af37d08c165d"
+    },
+    {
+      "path": "sales_demo/terraform/identity.tf",
+      "supports": "Cliente público Cognito, sin autorregistro, PKCE y roles.",
+      "scope": "local code or recorded evidence; no new runtime verification",
+      "sha256": "dea07dab2077ad5a12a5d3536fd7df9085af01964476d5128da0662e03e400fd"
+    },
+    {
+      "path": "sales_demo/terraform/compute.tf",
+      "supports": "Dos Lambdas de 256 MB, 10 s y logs de 14 días.",
+      "scope": "local code or recorded evidence; no new runtime verification",
+      "sha256": "04614e7cc99b277516a06fb4bef2ab81c2cb0283ae54ca0810a3afb8c62dd1d9"
+    },
+    {
+      "path": "sales_demo/terraform/workflow.tf",
+      "supports": "Workflow Standard cifrado y logs ERROR sin execution data.",
+      "scope": "local code or recorded evidence; no new runtime verification",
+      "sha256": "7ff397583bfd7cf59381e09e956003877cafed1d42ee1c692d201a350e44c815"
+    },
+    {
+      "path": "sales_demo/terraform/storage.tf",
+      "supports": "DynamoDB 5 RCU/5 WCU, KMS, TTL y PITR deshabilitado.",
+      "scope": "local code or recorded evidence; no new runtime verification",
+      "sha256": "fb3e8fa8c8e36054a17e8e5f4d6e8c7db6bd0f4dd1a9f22817b819b72899ed46"
+    },
+    {
+      "path": "sales_demo/terraform/expiry.tf",
+      "supports": "Scheduler inicial deshabilitado y expiración redundante.",
+      "scope": "local code or recorded evidence; no new runtime verification",
+      "sha256": "6d2e3da958a4508354f6a6035bf8d872f5aab64f2d8683394bca5d732379fec2"
+    },
+    {
+      "path": "sales_demo/terraform/iam.tf",
+      "supports": "Roles separados de API, worker, workflow y scheduler.",
+      "scope": "local code or recorded evidence; no new runtime verification",
+      "sha256": "a083670dd2c3a99ec5a4d7dd78111d26d789028f213f5324294ee68b1d27234f"
+    },
+    {
+      "path": "sales_demo/terraform/frontend.tf",
+      "supports": "CloudFront, OAC y origen S3 privado.",
+      "scope": "local code or recorded evidence; no new runtime verification",
+      "sha256": "003039587d4a54ce97fba1d28bc613a17cdc001a8c22d2b7d671ce90875d054c"
+    },
+    {
+      "path": "sales_demo/terraform/contract.tf",
+      "supports": "Precondiciones que requieren guardrails externos.",
+      "scope": "local code or recorded evidence; no new runtime verification",
+      "sha256": "2abedbef79faca53f959e410adb24ce50a89a1bab34440c022967efb71867f9f"
+    }
+  ],
+  "claims_policy": {
+    "aws_deployed": false,
+    "official_aws_assessment": false,
+    "certification": false,
+    "score": null,
+    "carbon_or_cost_benefit_measured": false
+  },
+  "validation": {
+    "canvas": [
+      1800,
+      1200
+    ],
+    "svg_xml": "PASS",
+    "shapes_within_canvas": "PASS",
+    "text_measurement": "Arial regular/bold font metrics; all measured lines within allocated width",
+    "external_assets": 0,
+    "contains_original_or_official_logos": false,
+    "png_rendering": "delegated to coordinating agent"
+  }
+}

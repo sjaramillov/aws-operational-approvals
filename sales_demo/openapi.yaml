@@ -1,0 +1,529 @@
+openapi: 3.1.0
+info:
+  title: Aprobaciones operativas API
+  version: 0.1.0-local
+  description: >-
+    Contrato del piloto sintético condicionado. No procesa PII, pagos, KYC,
+    firma legal ni aprovisionamiento real.
+jsonSchemaDialect: https://json-schema.org/draft/2020-12/schema
+tags:
+  - name: Pilot
+  - name: Applications
+  - name: Approvals
+security:
+  - cognitoJwt: []
+paths:
+  /health:
+    get:
+      operationId: getHealth
+      tags: [Pilot]
+      security: []
+      responses:
+        "200":
+          description: Estado explícito del piloto.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Health"
+        "500":
+          $ref: "#/components/responses/InternalError"
+        "503":
+          $ref: "#/components/responses/DependencyFailure"
+  /me:
+    get:
+      operationId: getMe
+      tags: [Pilot]
+      responses:
+        "200":
+          description: Perfil sintético resuelto server-side desde el sub autenticado.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Me"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "410":
+          $ref: "#/components/responses/Expired"
+        "500":
+          $ref: "#/components/responses/InternalError"
+        "503":
+          $ref: "#/components/responses/DependencyFailure"
+  /applications:
+    post:
+      operationId: createApplication
+      tags: [Applications]
+      parameters:
+        - name: Idempotency-Key
+          in: header
+          required: true
+          schema:
+            type: string
+            minLength: 16
+            maxLength: 128
+            pattern: '^[A-Za-z0-9._~:+/=\-]+$'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateApplication"
+      responses:
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "201":
+          description: Solicitud creada; el workflow fue iniciado de forma idempotente.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApplicationEnvelope"
+        "200":
+          description: Replay estable de una clave de idempotencia existente.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApplicationEnvelope"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "410":
+          $ref: "#/components/responses/Expired"
+        "429":
+          description: Límite duro de diez solicitudes por tenant y día UTC.
+          content:
+            application/problem+json:
+              schema:
+                $ref: "#/components/schemas/Problem"
+        "500":
+          $ref: "#/components/responses/InternalError"
+        "503":
+          $ref: "#/components/responses/DependencyFailure"
+    get:
+      operationId: listApplications
+      tags: [Applications]
+      responses:
+        "200":
+          description: Solicitudes visibles dentro del tenant autenticado.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [items]
+                additionalProperties: false
+                properties:
+                  items:
+                    type: array
+                    maxItems: 100
+                    items:
+                      $ref: "#/components/schemas/Application"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "410":
+          $ref: "#/components/responses/Expired"
+        "500":
+          $ref: "#/components/responses/InternalError"
+        "503":
+          $ref: "#/components/responses/DependencyFailure"
+  /applications/{applicationId}:
+    parameters:
+      - $ref: "#/components/parameters/ApplicationId"
+    get:
+      operationId: getApplication
+      tags: [Applications]
+      responses:
+        "200":
+          description: Solicitud del tenant autenticado.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [application]
+                additionalProperties: false
+                properties:
+                  application:
+                    $ref: "#/components/schemas/Application"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "410":
+          $ref: "#/components/responses/Expired"
+        "500":
+          $ref: "#/components/responses/InternalError"
+        "503":
+          $ref: "#/components/responses/DependencyFailure"
+  /approvals:
+    get:
+      operationId: listApprovals
+      tags: [Approvals]
+      responses:
+        "200":
+          description: >-
+            Solicitudes del mismo tenant cuyo callback ya está READY o CLAIMED;
+            una solicitud no aparece durante la carrera previa a la captura.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [items]
+                additionalProperties: false
+                properties:
+                  items:
+                    type: array
+                    maxItems: 100
+                    items:
+                      $ref: "#/components/schemas/ApprovalSummary"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "410":
+          $ref: "#/components/responses/Expired"
+        "500":
+          $ref: "#/components/responses/InternalError"
+        "503":
+          $ref: "#/components/responses/DependencyFailure"
+  /approvals/{applicationId}/decision:
+    parameters:
+      - $ref: "#/components/parameters/ApplicationId"
+    post:
+      operationId: decideApproval
+      tags: [Approvals]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ManagerDecision"
+      responses:
+        "202":
+          description: >-
+            Callback aceptado; la respuesta no presupone que el finalizador
+            asíncrono ya haya cambiado el estado durable.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DecisionAccepted"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "410":
+          $ref: "#/components/responses/Expired"
+        "500":
+          $ref: "#/components/responses/InternalError"
+        "503":
+          $ref: "#/components/responses/DependencyFailure"
+  /plan-plus:
+    get:
+      operationId: getPlanPlus
+      tags: [Pilot]
+      responses:
+        "200":
+          description: Activación sintética de Servicio para el tenant autenticado.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [plan]
+                additionalProperties: false
+                properties:
+                  plan:
+                    $ref: "#/components/schemas/PlanPlus"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "410":
+          $ref: "#/components/responses/Expired"
+        "500":
+          $ref: "#/components/responses/InternalError"
+        "503":
+          $ref: "#/components/responses/DependencyFailure"
+components:
+  securitySchemes:
+    cognitoJwt:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://example.invalid/oauth2/authorize
+          tokenUrl: https://example.invalid/oauth2/token
+          scopes:
+            openid: Identidad base del piloto.
+  parameters:
+    ApplicationId:
+      name: applicationId
+      in: path
+      required: true
+      schema:
+        type: string
+        pattern: '^app_[0-9a-f]{32}$'
+  responses:
+    BadRequest:
+      description: El body, header o transición solicitada no cumple el contrato.
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+    Unauthorized:
+      description: JWT ausente, inválido o sin identidad sintética habilitada.
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+    Forbidden:
+      description: El rol sintético no puede ejecutar la operación.
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+    NotFound:
+      description: Inexistente o perteneciente a otro tenant; ambos son indistinguibles.
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+    Conflict:
+      description: La transición o clave de idempotencia contradice estado durable.
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+    Expired:
+      description: El piloto expiró y opera fail-closed.
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+    DependencyFailure:
+      description: Una dependencia no confirmó de forma compatible la operación.
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+    InternalError:
+      description: >-
+        Error inesperado sanitizado; el detalle interno permanece únicamente en
+        logs restringidos.
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+  schemas:
+    Health:
+      type: object
+      required: [status, expiresAt, syntheticData, pii]
+      additionalProperties: false
+      properties:
+        status:
+          type: string
+          enum: [PREPARED, ACTIVE, EXPIRED]
+        expiresAt:
+          oneOf:
+            - type: string
+              format: date-time
+            - type: "null"
+        syntheticData:
+          const: true
+        pii:
+          const: false
+    Me:
+      type: object
+      required: [subject, tenantId, role, displayName, syntheticData]
+      additionalProperties: false
+      properties:
+        subject:
+          type: string
+          pattern: '^actor_[0-9a-f]{16}$'
+        tenantId:
+          type: string
+        role:
+          $ref: "#/components/schemas/Role"
+        displayName:
+          type: string
+          maxLength: 80
+        syntheticData:
+          const: true
+    CreateApplication:
+      type: object
+      required: [vehicleCount]
+      additionalProperties: false
+      properties:
+        vehicleCount:
+          type: integer
+          minimum: 1
+          maximum: 10000
+    ApplicationEnvelope:
+      type: object
+      required: [application, replayed]
+      additionalProperties: false
+      properties:
+        application:
+          $ref: "#/components/schemas/Application"
+        replayed:
+          type: boolean
+    Application:
+      type: object
+      required:
+        - applicationId
+        - tenantId
+        - vehicleCount
+        - status
+        - createdAt
+        - updatedAt
+        - auditTrail
+      additionalProperties: false
+      properties:
+        applicationId:
+          type: string
+          pattern: '^app_[0-9a-f]{32}$'
+        tenantId:
+          type: string
+        vehicleCount:
+          type: integer
+        status:
+          $ref: "#/components/schemas/ApplicationStatus"
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        decision:
+          $ref: "#/components/schemas/Decision"
+        reasonCode:
+          type: string
+          pattern: '^[A-Z][A-Z0-9_]{2,63}$'
+        contractId:
+          type: string
+          pattern: '^ctr_[0-9a-f]{24}$'
+        planActivatedAt:
+          type: string
+          format: date-time
+        auditTrail:
+          type: array
+          maxItems: 50
+          items:
+            $ref: "#/components/schemas/AuditEntry"
+    ApprovalSummary:
+      type: object
+      required: [applicationId, vehicleCount, status, createdAt]
+      additionalProperties: false
+      properties:
+        applicationId:
+          type: string
+        vehicleCount:
+          type: integer
+        status:
+          const: PENDING_MANAGER
+        createdAt:
+          type: string
+          format: date-time
+    ManagerDecision:
+      oneOf:
+        - type: object
+          required: [decision, reasonCode]
+          additionalProperties: false
+          properties:
+            decision:
+              const: APPROVE
+            reasonCode:
+              type: string
+              enum: [CAPACITY_CONFIRMED, POLICY_EXCEPTION_APPROVED]
+        - type: object
+          required: [decision, reasonCode]
+          additionalProperties: false
+          properties:
+            decision:
+              const: REJECT
+            reasonCode:
+              type: string
+              enum: [CAPACITY_NOT_AVAILABLE, INCOMPLETE_COMMERCIAL_CASE]
+    DecisionAccepted:
+      type: object
+      required: [applicationId, accepted, status]
+      additionalProperties: false
+      properties:
+        applicationId:
+          type: string
+          pattern: '^app_[0-9a-f]{32}$'
+        accepted:
+          const: true
+        status:
+          const: PENDING_MANAGER
+    AuditEntry:
+      type: object
+      required: [action, actorId, actorRole, occurredAt]
+      additionalProperties: false
+      properties:
+        action:
+          type: string
+          enum:
+            - APPLICATION_SUBMITTED
+            - MANAGER_APPROVAL_REQUESTED
+            - MANAGER_DECISION_RECORDED
+            - CONTRACT_ACTIVATED
+            - APPLICATION_REJECTED
+        actorId:
+          type: string
+        actorRole:
+          $ref: "#/components/schemas/Role"
+        occurredAt:
+          type: string
+          format: date-time
+        decision:
+          $ref: "#/components/schemas/Decision"
+        reasonCode:
+          type: string
+    PlanPlus:
+      type: object
+      required: [status]
+      additionalProperties: false
+      properties:
+        status:
+          type: string
+          enum: [ACTIVE, INACTIVE]
+        applicationId:
+          type: string
+        contractId:
+          type: string
+        activatedAt:
+          type: string
+          format: date-time
+    Role:
+      type: string
+      enum: [CUSTOMER, MANAGER]
+    Decision:
+      type: string
+      enum: [APPROVE, REJECT]
+    ApplicationStatus:
+      type: string
+      enum: [PENDING_MANAGER, APPROVED, REJECTED, CONTRACT_ACTIVE, EXPIRED]
+    Problem:
+      type: object
+      required: [type, title, status, detail, instance, code, requestId]
+      additionalProperties: false
+      properties:
+        type:
+          type: string
+          format: uri
+        title:
+          type: string
+        status:
+          type: integer
+          minimum: 400
+          maximum: 599
+        detail:
+          type: string
+        instance:
+          type: string
+        code:
+          type: string
+        requestId:
+          type: string

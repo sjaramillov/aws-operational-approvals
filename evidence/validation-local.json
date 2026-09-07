@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-07",
+  "scope": "Independent local extraction; no AWS deployment, no remote account tests",
+  "source_manifest_sha256": "589186fb90b7daa4019f26be5ed8c2542955157f367cf829e6dc1d5dd369f5cc",
+  "environment": {
+    "python": "3.14",
+    "pytest": "9.1.1",
+    "node": "26.0.0",
+    "npm": "11.12.1",
+    "terraform": "1.15.5",
+    "aws_provider": "6.61.0",
+    "vitest": "3.2.7",
+    "vite": "7.3.6"
+  },
+  "checks": [
+    {
+      "name": "candidate_contract",
+      "status": "PASS",
+      "api_operations": 8
+    },
+    {
+      "name": "python_backend_contract_infrastructure",
+      "command": "python3 -m pytest sales_demo/tests sales_demo/terraform/tests -q",
+      "status": "PASS",
+      "passed": 146
+    },
+    {
+      "name": "typescript",
+      "status": "PASS"
+    },
+    {
+      "name": "vitest",
+      "status": "PASS",
+      "passed": 38
+    },
+    {
+      "name": "remote_runner_configuration_unit_tests_only",
+      "status": "PASS",
+      "passed": 6,
+      "aws_calls": 0
+    },
+    {
+      "name": "runtime_config_contract_and_production_client_build",
+      "status": "PASS"
+    },
+    {
+      "name": "playwright_local_demo",
+      "status": "PASS",
+      "passed": 8,
+      "includes": [
+        "50 automatic",
+        "51 approved",
+        "52 rejected",
+        "tenant isolation",
+        "keyboard",
+        "axe sampled screens",
+        "320px",
+        "OAuth cache exclusion"
+      ]
+    },
+    {
+      "name": "python_http_loopback_smoke",
+      "status": "PASS",
+      "passed": 15,
+      "frontend_integration": false
+    },
+    {
+      "name": "lambda_source_packages_reproducible",
+      "status": "PASS",
+      "package_bytes": 19823
+    },
+    {
+      "name": "terraform_fmt_validate_mock_test",
+      "status": "PASS",
+      "mock_tests_passed": 1
+    },
+    {
+      "name": "terraform_static_plan_guard",
+      "status": "PASS"
+    },
+    {
+      "name": "tflint",
+      "status": "PASS"
+    },
+    {
+      "name": "checkov",
+      "status": "PASS_WITH_DECLARED_EXCLUSIONS",
+      "passed": 171,
+      "failed": 0,
+      "skipped": 40
+    },
+    {
+      "name": "source_and_destination_manifest",
+      "status": "PASS",
+      "imported_files": 123
+    },
+    {
+      "name": "visual_inspection",
+      "status": "PASS",
+      "screenshots": [
+        "screenshots/demo-login.png",
+        "screenshots/demo-pending.png"
+      ]
+    }
+  ],
+  "limits": [
+    "Browser demo and Python API are separate local surfaces; they are not integrated in this demonstration.",
+    "AWS bootstrap/guardrails excluded and must be independently designed; current IaC is a candidate, not an autonomous production deployment.",
+    "No account, deployment, cost, client outcome, throughput or availability was measured.",
+    "Automated axe checks on sampled flows are not a complete WCAG certification.",
+    "Lambda ZIPs contain deterministic application sources; they rely on the AWS-provided SDK at runtime, which must be pinned/packaged for a fully controlled client release.",
+    "Security scan exclusions remain explicit; zero failed checks does not establish production security."
+  ],
+  "execution_notes": [
+    "Loopback servers and Terraform/TFLint IPC required sandbox escalation; no new AWS authorization or account access occurred.",
+    "The initial HTTP smoke read the pending state before asynchronous finalization; bounded GET polling was added and the smoke then passed.",
+    "Existing JS dependencies and the existing AWS provider were reused locally; no package download was required.",
+    "Two synthetic idempotency fixtures flagged by generic-api-key were replaced with explicit example identifiers; no secret allowlist added."
+  ]
+}
